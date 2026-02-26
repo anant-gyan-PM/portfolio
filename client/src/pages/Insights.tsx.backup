@@ -1,0 +1,404 @@
+'use client';
+
+import { useState } from 'react';
+import { ArrowLeft, Clock, Calendar } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
+
+export default function Insights() {
+  const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
+
+  const articles = [
+    {
+      id: 'gtm-strategy',
+      title: 'Building GTM Strategy for EdTech Products',
+      category: 'GTM Strategy',
+      date: 'February 2024',
+      readTime: '8 min read',
+      excerpt: 'How to achieve product-market fit and scale adoption in underserved education markets.',
+      thumbnail: 'https://private-us-east-1.manuscdn.com/sessionFile/ELzDsBUWidNcCJbqpfduYD/sandbox/7rBssow89K9kCRUu6m8irb-img-1_1771961696000_na1fn_YXJ0aWNsZS1ndG0tc3RyYXRlZ3k.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvRUx6RHNCVVdpZE5jQ0picXBmZHVZRC9zYW5kYm94LzdyQnNzb3c4OUs5a0NSVXU2bThpcmItaW1nLTFfMTc3MTk2MTY5NjAwMF9uYTFmbl9ZWEowYVdOc1pTMW5kRzB0YzNSeVlYUmxaM2sucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=VLgpGzLmJ7OGqx4ZzDz89aMraC9uky9tT7e-gYZ~QSRHC1I~7jUrWagPiuF5Yd2mXUNLIrHjHjpF~DneMj6~a0Kin8j3EL72Y7W1ib1KcX~PaSdjH9thXVPl5WuodYbViXxl2cQzU1NPQdFwJA5ihkll21i-FhQhUM5uvGU47JUX-JC3zFR4GzjiXWMrZ8v6h0rHNgf~741DGlIgLLvdiJUr4~8K244sx9CO5XcIJURvtU9T-2hBNihpYI3fsje7Xne0eI3D1AqABiKbxHk606dER890XNE-CAKh77v1~Am-x3IO9TPdaif9dc44jqSIv9qoWxfqoYsVwmPJS~hYQQ__',
+      renderContent: () => (
+        <div className="space-y-8 text-lg leading-relaxed">
+          <p className="text-base">EdTech is one of the most challenging sectors to scale. While the opportunity is massive—billions of students worldwide lack access to quality education—the path to product-market fit is fraught with obstacles: fragmented buyer personas, long sales cycles, regulatory complexity, and deeply entrenched competitors.</p>
+
+          <h3 className="text-2xl font-semibold pt-4">The ELEVATE Wisconsin Story</h3>
+
+          <p className="text-base">When we launched ELEVATE Wisconsin, we faced a critical question: How do you scale financial literacy education to rural and tribal communities where traditional EdTech playbooks fail?</p>
+
+          <p className="text-base">The answer wasn't a slick mobile app or a viral marketing campaign. It was understanding that in EdTech, the buyer isn't always the end user. Teachers are gatekeepers. School districts are decision-makers. Tribal governments are stakeholders.</p>
+
+          <h3 className="text-2xl font-semibold pt-4">Three Pillars of EdTech GTM</h3>
+
+          <div className="mt-6">
+            <h4 className="font-bold text-lg mb-6">1. Advisory Board Validation</h4>
+            <p className="mb-6 text-base">Before building, we spent 6 months talking to educators, tribal leaders, and financial experts. Not focus groups—real, ongoing relationships. This wasn't market research; it was co-creation.</p>
+            <p className="text-base">Result: We identified that teachers needed training, not just content. This insight became the foundation of our entire product strategy.</p>
+          </div>
+
+          <div className="mt-8">
+            <h4 className="font-bold text-lg mb-6">2. Structured Pilots with Real Metrics</h4>
+            <p className="mb-6 text-base">We didn't launch nationally. We ran 3-month pilots with 5 school districts, measuring:</p>
+            <ul className="list-disc list-inside space-y-3 mb-6">
+              <li className="text-base">Teacher engagement (lesson completion rates)</li>
+              <li className="text-base">Student outcomes (pre/post financial literacy assessments)</li>
+              <li className="text-base">Operational feasibility (time to integrate into curriculum)</li>
+              <li className="text-base">Stakeholder satisfaction (NPS from teachers and administrators)</li>
+            </ul>
+            <p className="text-base">This data became our proof point for scaling. When we approached 10 more districts, we didn't pitch; we showed results.</p>
+          </div>
+
+          <div className="mt-8">
+            <h4 className="font-bold text-lg mb-6">3. The Multiplier Effect: Training Teachers to Train Teachers</h4>
+            <p className="mb-6 text-base">The breakthrough came when we realized: teachers don't just deliver content—they train other teachers. If we could train 25 teachers deeply, they could reach 1,000+ students and influence 50+ other educators.</p>
+            <p className="text-base">This multiplier effect is unique to EdTech. It's not about user acquisition; it's about influence networks.</p>
+          </div>
+
+          <h3 className="text-2xl font-semibold pt-4">Key Takeaways</h3>
+          <ul className="space-y-4 mt-6">
+            <li className="flex gap-3">
+              <span className="text-primary font-bold">•</span>
+              <span className="text-base"><strong>Understand your true buyer:</strong> In EdTech, it's rarely the student. Map the decision-making hierarchy.</span>
+            </li>
+            <li className="flex gap-3">
+              <span className="text-primary font-bold">•</span>
+              <span className="text-base"><strong>Pilot before scale:</strong> EdTech requires proof of impact. Run 3-month pilots with real metrics.</span>
+            </li>
+            <li className="flex gap-3">
+              <span className="text-primary font-bold">•</span>
+              <span className="text-base"><strong>Leverage influence networks:</strong> Teachers, principals, and district leaders are your distribution channel.</span>
+            </li>
+            <li className="flex gap-3">
+              <span className="text-primary font-bold">•</span>
+              <span className="text-base"><strong>Build for underserved markets:</strong> Rural and tribal communities have unique needs. Tailor your GTM accordingly.</span>
+            </li>
+          </ul>
+        </div>
+      )
+    },
+    {
+      id: 'fintech-operations',
+      title: 'Operational Excellence in Fintech',
+      category: 'Fintech Operations',
+      date: 'January 2024',
+      readTime: '10 min read',
+      excerpt: 'Why operational resilience is the secret weapon for fintech success.',
+      thumbnail: 'https://private-us-east-1.manuscdn.com/sessionFile/ELzDsBUWidNcCJbqpfduYD/sandbox/7rBssow89K9kCRUu6m8irb-img-2_1771961696000_na1fn_YXJ0aWNsZS1maW50ZWNoLW9wcw.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvRUx6RHNCVVdpZE5jQ0picXBmZHVZRC9zYW5kYm94LzdyQnNzb3c4OUs5a0NSVXU2bThpcmItaW1nLTJfMTc3MTk2MTY5NjAwMF9uYTFmbl9ZWEowYVdOc1pTMW1hVzUwWldOb0xXOXdjdy5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=Bi64f5apdS2BVWeGKAC9oyvii4--4Dd2xyNDqsmIK2ygriSCaii0paduESDz4zfe-nUEQFpl19tSmz5ibhRTFOk7AfLWfqwCo1m9KW4jPv3t5R96d~t7WBxkREVbmNoYuLPsmccbT-6rFpMrqGu0HQPIciO-ZSTu~GBFqMdtIgXxXxMz9SFM6-SE9u4-yOn9qaGpzGEcwbYhl50Km8ZsiyEUobJKYIMmdKHhFYjioEId6Ff4A956xdY8mbK3zsyW1SLcVfFbZEypi0gpf3tPT4BBtYsFw6uA1JlodaM193FhRl-RmNvgi15cjCSDNJSHlQ8DSMdV9Buybg33k7KB1g__',
+      renderContent: () => (
+        <div className="space-y-8 text-lg leading-relaxed">
+          <p className="text-base">Fintech is unforgiving. A 5-minute outage can cost millions in lost transactions. A compliance error can trigger regulatory fines. A security breach can destroy trust overnight.</p>
+
+          <p className="text-base">This is why operational excellence isn't optional in fintech—it's existential.</p>
+
+          <h3 className="text-2xl font-semibold pt-4">The Three Dimensions of Fintech Excellence</h3>
+
+          <div className="mt-6">
+            <h4 className="font-bold text-lg mb-6">1. User Experience Simplicity</h4>
+            <p className="mb-6 text-base">Cryptocurrency has 10,000+ coins. Picking the right ones requires expertise most users don't have. Our solution: theme-based baskets (Metaverse, DeFi, NFT, Web 3.0).</p>
+            <p className="text-base">This wasn't just a feature—it was a philosophy. We reduced decision complexity from 10,000 options to 4. Onboarding time dropped by 50%.</p>
+          </div>
+
+          <div className="mt-8">
+            <h4 className="font-bold text-lg mb-6">2. Operational Resilience</h4>
+            <p className="mb-6 text-base">We built a 24/7 monitoring system with sub-5-minute issue resolution SLA. Every alert triggered an automated response:</p>
+            <ul className="list-disc list-inside space-y-3 mb-6">
+              <li className="text-base">Wallet balance mismatches → Automatic reconciliation</li>
+              <li className="text-base">API latency spikes → Automatic failover to backup systems</li>
+              <li className="text-base">Unusual transaction patterns → Automatic fraud detection</li>
+            </ul>
+            <p className="text-base">Result: 99.2% uptime. Zero security breaches. Zero regulatory violations.</p>
+          </div>
+
+          <div className="mt-8">
+            <h4 className="font-bold text-lg mb-6">3. Regulatory Compliance Automation</h4>
+            <p className="mb-6 text-base">KYC/AML compliance is tedious and error-prone when done manually. We automated the entire workflow:</p>
+            <ul className="list-disc list-inside space-y-3 mb-6">
+              <li className="text-base">Identity verification with 99.2% accuracy</li>
+              <li className="text-base">Sanctions screening in real-time</li>
+              <li className="text-base">Transaction monitoring with machine learning</li>
+            </ul>
+            <p className="text-base">Result: Compliance became a competitive advantage, not a cost center.</p>
+          </div>
+
+          <h3 className="text-2xl font-semibold pt-4">Key Takeaways</h3>
+          <ul className="space-y-4 mt-6">
+            <li className="flex gap-3">
+              <span className="text-primary font-bold">•</span>
+              <span className="text-base"><strong>Simplicity is a feature:</strong> In fintech, reducing user friction is as important as adding features.</span>
+            </li>
+            <li className="flex gap-3">
+              <span className="text-primary font-bold">•</span>
+              <span className="text-base"><strong>Automate everything:</strong> Manual processes are security risks and cost drains.</span>
+            </li>
+            <li className="flex gap-3">
+              <span className="text-primary font-bold">•</span>
+              <span className="text-base"><strong>Monitor obsessively:</strong> In fintech, you can't afford to be reactive. Be proactive.</span>
+            </li>
+            <li className="flex gap-3">
+              <span className="text-primary font-bold">•</span>
+              <span className="text-base"><strong>Build a compliance culture:</strong> Compliance isn't a department—it's a mindset.</span>
+            </li>
+          </ul>
+        </div>
+      )
+    },
+    {
+      id: 'web3-innovation',
+      title: 'Web3 Innovation: Opportunities and Challenges',
+      category: 'Web3 Innovation',
+      date: 'December 2023',
+      readTime: '9 min read',
+      excerpt: 'Navigating the Web3 landscape: what works, what doesn\'t, and where the real opportunity lies.',
+      thumbnail: 'https://private-us-east-1.manuscdn.com/sessionFile/ELzDsBUWidNcCJbqpfduYD/sandbox/7rBssow89K9kCRUu6m8irb-img-3_1771961695000_na1fn_YXJ0aWNsZS13ZWIz.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvRUx6RHNCVVdpZE5jQ0picXBmZHVZRC9zYW5kYm94LzdyQnNzb3c4OUs5a0NSVXU2bThpcmItaW1nLTNfMTc3MTk2MTY5NTAwMF9uYTFmbl9ZWEowYVdOc1pTMTNaV0l6LnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=n6he7f6~-hRjQ2WSKi5rVILc75EFWVAeNmqLziXM1NzmWMI02m9AznS4bd8s5CxFPayBJfIgPyHkRD-VYbS0RjSh9dcbcdOEP5642gWgk~lctshZfKPXmmRrNbK34q6rWaTTigRYUl89HGVemxMM7tYUlO0AA6MzOu8CamfkevfC1W6d1-iBPyG3FHqmHaHDb8sxaacVZkp778ctuUuGsRQuTZaYgJFYqNl-ij1Hp8dhTej190iaIMga9ceSTosi18yFgC5phv4Zb5k~FUk3mcj0Ru~7Kh71mRTRE4Y69vrUMlwe42itdJms8UPoOylKmOScpdQTN6yi6W1BvnJlFg__',
+      renderContent: () => (
+        <div className="space-y-8 text-lg leading-relaxed">
+          <p className="text-base">Web3 is at an inflection point. The hype has cooled. The scams have been exposed. But the underlying technology—decentralized finance, self-sovereign identity, programmable money—remains transformative.</p>
+
+          <p className="text-base">The question isn't whether Web3 will matter. It's where the real opportunity lies.</p>
+
+          <h3 className="text-2xl font-semibold pt-4">The Web3 Opportunity</h3>
+
+          <div className="mt-6">
+            <h4 className="font-bold text-lg mb-6">1. Programmable Money</h4>
+            <p className="mb-6 text-base">In traditional finance, money is static. You send it, and it sits in an account. In Web3, money is programmable. You can:</p>
+            <ul className="list-disc list-inside space-y-3 mb-6">
+              <li className="text-base">Create automated investment strategies that rebalance portfolios monthly</li>
+              <li className="text-base">Build lending protocols where interest accrues in real-time</li>
+              <li className="text-base">Design insurance products that settle claims automatically</li>
+            </ul>
+            <p className="text-base">This programmability is the killer app. It enables financial products that were impossible before.</p>
+          </div>
+
+          <div className="mt-8">
+            <h4 className="font-bold text-lg mb-6">2. Reduced Intermediaries</h4>
+            <p className="mb-6 text-base">Traditional finance requires layers of intermediaries: banks, brokers, custodians, regulators. Each layer adds cost and friction.</p>
+            <p className="mb-6 text-base">Web3 removes intermediaries. Users control their own wallets. Transactions settle in minutes, not days. Costs drop from 2-3% to 0.1-0.5%.</p>
+            <p className="text-base">For emerging markets where traditional banking is inaccessible, this is revolutionary.</p>
+          </div>
+
+          <div className="mt-8">
+            <h4 className="font-bold text-lg mb-6">3. Global Access</h4>
+            <p className="mb-6 text-base">A teenager in Nigeria can access the same financial products as a Wall Street trader. No passport required. No bank account needed. Just an internet connection.</p>
+            <p className="text-base">This democratization of finance is Web3's greatest promise.</p>
+          </div>
+
+          <h3 className="text-2xl font-semibold pt-4">Key Takeaways</h3>
+          <ul className="space-y-4 mt-6">
+            <li className="flex gap-3">
+              <span className="text-primary font-bold">•</span>
+              <span className="text-base"><strong>Focus on real utility:</strong> Ignore the hype. Build products that solve real problems.</span>
+            </li>
+            <li className="flex gap-3">
+              <span className="text-primary font-bold">•</span>
+              <span className="text-base"><strong>Embrace regulation:</strong> Regulatory clarity is a competitive advantage, not a burden.</span>
+            </li>
+            <li className="flex gap-3">
+              <span className="text-primary font-bold">•</span>
+              <span className="text-base"><strong>Build for emerging markets:</strong> Web3's killer app is financial inclusion, not speculation.</span>
+            </li>
+            <li className="flex gap-3">
+              <span className="text-primary font-bold">•</span>
+              <span className="text-base"><strong>Invest in security:</strong> In Web3, security breaches are irreversible. Invest accordingly.</span>
+            </li>
+          </ul>
+        </div>
+      )
+    },
+    {
+      id: 'fintech-compliance',
+      title: 'Fintech Compliance: Building Trust Through Regulation',
+      category: 'Compliance & Regulation',
+      date: 'November 2023',
+      readTime: '7 min read',
+      excerpt: 'How to turn compliance from a cost center into a competitive advantage.',
+      thumbnail: 'https://private-us-east-1.manuscdn.com/sessionFile/ELzDsBUWidNcCJbqpfduYD/sandbox/7rBssow89K9kCRUu6m8irb-img-4_1771961691000_na1fn_YXJ0aWNsZS1jb21wbGlhbmNl.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvRUx6RHNCVVdpZE5jQ0picXBmZHVZRC9zYW5kYm94LzdyQnNzb3c4OUs5a0NSVXU2bThpcmItaW1nLTRfMTc3MTk2MTY5MTAwMF9uYTFmbl9ZWEowYVdOc1pTMWpiMjF3YkdsaGJtTmwucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=umSu86nVQV5or3eBTJteSHcEjQMMxCO5YcLJ-kPwBuMM5OYl47meS2K2crpl1IsKRvpefmD0uQEgQF~9BWOJ27LEIh-015TQjWfEjTcNKY6sWNE4p20S3y21Vp7jYYx0VNWGVD9QuRjCfpvnmqzESOuWU729hSBKMtxI~FjCzMNW2eQ7a9XwjBuJ9izhAmSnPGcq4V6sAShBLFLxuJlSUsxTzYFLc5ithTASy5RtujJ6TpJZtpswyGZ~2nbTSgeucIQ7Fb3jsi-t9HFL4S5MbW~Uq5cx7TRwZgo-JRoenNWWXlVqf7SoSSTwo0z5CGc6dsSxgNspoffH-zCsH8o0ug__',
+      renderContent: () => (
+        <div className="space-y-8 text-lg leading-relaxed">
+          <p className="text-base">Compliance is boring. It's expensive. It slows down product development. And it's absolutely essential.</p>
+
+          <p className="text-base">Most fintech companies view compliance as a cost. We viewed it as a competitive advantage.</p>
+
+          <div className="mt-6">
+            <h4 className="font-bold text-lg mb-6">1. Trust with Users</h4>
+            <p className="mb-6 text-base">When users see that you're compliant with SEC, FINRA, and GDPR, they trust you more. They're willing to deposit more money. They're less likely to churn.</p>
+            <p className="text-base">Compliance isn't a cost—it's a marketing advantage.</p>
+          </div>
+
+          <div className="mt-8">
+            <h4 className="font-bold text-lg mb-6">2. Relationships with Regulators</h4>
+            <p className="mb-6 text-base">Regulators appreciate companies that take compliance seriously. When you proactively report issues and maintain strong controls, regulators are more lenient during examinations.</p>
+            <p className="text-base">We never had a regulatory violation. This wasn't luck—it was culture.</p>
+          </div>
+
+          <h3 className="text-2xl font-semibold pt-4">Key Takeaways</h3>
+          <ul className="space-y-4 mt-6">
+            <li className="flex gap-3">
+              <span className="text-primary font-bold">•</span>
+              <span className="text-base"><strong>Compliance is not optional:</strong> In fintech, it's the price of admission.</span>
+            </li>
+            <li className="flex gap-3">
+              <span className="text-primary font-bold">•</span>
+              <span className="text-base"><strong>Compliance is not a cost:</strong> It's a competitive advantage and a trust builder.</span>
+            </li>
+            <li className="flex gap-3">
+              <span className="text-primary font-bold">•</span>
+              <span className="text-base"><strong>Automate compliance:</strong> Technology makes compliance faster, cheaper, and more reliable.</span>
+            </li>
+            <li className="flex gap-3">
+              <span className="text-primary font-bold">•</span>
+              <span className="text-base"><strong>Build compliance culture:</strong> It's not just about rules—it's about values.</span>
+            </li>
+          </ul>
+        </div>
+      )
+    }
+  ];
+
+  if (selectedArticle) {
+    const article = articles.find(a => a.id === selectedArticle);
+    if (!article) return null;
+
+    return (
+      <div className="min-h-screen bg-background">
+        {/* Navigation */}
+        <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+          <div className="container py-4 flex items-center justify-between">
+            <a href="/" className="text-2xl font-bold" style={{ fontFamily: "'Playfair Display', serif" }}>
+              Anant Gyan
+            </a>
+            <button 
+              onClick={() => setSelectedArticle(null)}
+              className="text-sm font-medium hover:text-primary transition-colors flex items-center gap-1"
+            >
+              <ArrowLeft size={16} />
+              Back to Insights
+            </button>
+          </div>
+        </nav>
+
+        {/* Article Content */}
+        <article className="py-20 bg-background">
+          <div className="container max-w-4xl">
+            {/* Article Header */}
+            <div className="mb-20">
+              <Badge variant="secondary" className="mb-4">{article.category}</Badge>
+              <h1 className="text-5xl font-bold mb-6 text-foreground" style={{ fontFamily: "'Playfair Display', serif" }}>
+                {article.title}
+              </h1>
+              <div className="flex items-center gap-6 text-muted-foreground mb-8">
+                <div className="flex items-center gap-2">
+                  <Calendar size={16} />
+                  <span>{article.date}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Clock size={16} />
+                  <span>{article.readTime}</span>
+                </div>
+              </div>
+              <img src={article.thumbnail} alt={article.title} className="w-full rounded-lg shadow-lg mb-16" />
+            </div>
+
+            {/* Article Body */}
+            <div className="pt-12 border-t border-border">
+              {article.renderContent()}
+            </div>
+          </div>
+        </article>
+
+        {/* Related Articles */}
+        <section className="py-16 bg-card border-t border-border">
+          <div className="container">
+            <h2 className="text-3xl font-bold mb-12 text-foreground" style={{ fontFamily: "'Playfair Display', serif" }}>
+              Other Insights
+            </h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              {articles
+                .filter(a => a.id !== selectedArticle)
+                .map(article => (
+                  <button
+                    key={article.id}
+                    onClick={() => setSelectedArticle(article.id)}
+                    className="text-left group"
+                  >
+                    <div className="rounded-lg overflow-hidden mb-4 h-40">
+                      <img src={article.thumbnail} alt={article.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+                    </div>
+                    <Badge variant="secondary" className="mb-2">{article.category}</Badge>
+                    <h3 className="text-lg font-semibold mb-2 text-foreground group-hover:text-primary transition-colors" style={{ fontFamily: "'Lora', serif" }}>
+                      {article.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground line-clamp-2 mb-3">
+                      {article.excerpt}
+                    </p>
+                    <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                      <Clock size={14} />
+                      <span>{article.readTime}</span>
+                    </div>
+                  </button>
+                ))}
+            </div>
+          </div>
+        </section>
+      </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen bg-background">
+      {/* Navigation */}
+      <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+        <div className="container py-4 flex items-center justify-between">
+          <a href="/" className="text-2xl font-bold" style={{ fontFamily: "'Playfair Display', serif" }}>
+            Anant Gyan
+          </a>
+          <a href="/" className="text-sm font-medium hover:text-primary transition-colors">
+            Back to Home
+          </a>
+        </div>
+      </nav>
+
+      {/* Insights Grid */}
+      <section className="py-20 bg-background">
+        <div className="container">
+          <div className="mb-16">
+            <h1 className="text-5xl font-bold mb-4 text-foreground" style={{ fontFamily: "'Playfair Display', serif" }}>
+              Insights
+            </h1>
+            <p className="text-xl text-muted-foreground">
+              Thoughts on GTM strategy, fintech operations, Web3 innovation, and compliance
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {articles.map(article => (
+              <button
+                key={article.id}
+                onClick={() => setSelectedArticle(article.id)}
+                className="text-left group"
+              >
+                <div className="rounded-lg overflow-hidden mb-6 h-48">
+                  <img src={article.thumbnail} alt={article.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+                </div>
+                <Badge variant="secondary" className="mb-3">{article.category}</Badge>
+                <h2 className="text-2xl font-semibold mb-3 text-foreground group-hover:text-primary transition-colors" style={{ fontFamily: "'Lora', serif" }}>
+                  {article.title}
+                </h2>
+                <p className="text-muted-foreground mb-4 line-clamp-3">
+                  {article.excerpt}
+                </p>
+                <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                  <div className="flex items-center gap-2">
+                    <Calendar size={16} />
+                    <span>{article.date}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Clock size={16} />
+                    <span>{article.readTime}</span>
+                  </div>
+                </div>
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
