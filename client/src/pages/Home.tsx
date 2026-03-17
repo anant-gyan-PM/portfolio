@@ -52,10 +52,10 @@ export default function Home() {
               Product Manager
             </h1>
             <p className="text-lg lg:text-xl mb-2 text-muted-foreground max-w-2xl" style={{ fontFamily: "'Lora', serif" }}>
-              GTM Strategy | Product Operations
+              Senior Fintech PM | KYC/AML . Custody . Payments . AI
             </p>
             <p className="text-lg lg:text-xl mb-8 text-muted-foreground max-w-2xl" style={{ fontFamily: "'Lora', serif" }}>
-              KYC/AML & API Integrations Expert
+              70k+ Users . $3M+ Assets | Wisconsin MBA
             </p>
             <div className="grid grid-cols-3 gap-8 mb-12 max-w-2xl">
               <div>
@@ -67,8 +67,8 @@ export default function Home() {
                 <div className="text-sm text-muted-foreground">Users Enabled</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-primary mb-2">45%</div>
-                <div className="text-sm text-muted-foreground">Churn Reduction</div>
+                <div className="text-4xl font-bold text-primary mb-2">90%</div>
+                <div className="text-sm text-muted-foreground">Faster with AI</div>
               </div>
             </div>
             <div className="flex gap-4">
@@ -101,7 +101,7 @@ export default function Home() {
               </h2>
               <div className="prose prose-lg max-w-none">
                 <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-                  I am a Product Manager at Asset Builders of America, with a proven track record of launching successful products and scaling user adoption through strategic GTM approaches and operational excellence. I recently completed my MBA in Technology, Strategy & Product Management at UW-Madison, bringing a unique blend of technical expertise and business acumen to every product challenge.
+                  I build financial products from the inside out. Five years across crypto exchanges and fintech platforms taught me the infrastructure layer most PMs never touch i.e. KYC/AML, custody, reconciliation, compliance workflows. Now with AI at the center of how I work, I'm exploring what happens when AI moves into the financial logic itself and not just the workflow above it, but the decisioning underneath.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   My experience spans fintech and edtech domains, where I've led cross-functional teams to deliver products that drive measurable business impact. From securing $250K in funding to enabling $3M in assets for 70,000+ users, I focus on building products that solve real problems and create lasting value.
@@ -227,7 +227,7 @@ export default function Home() {
                 Data-Driven Leadership
               </h3>
               <p className="text-muted-foreground mb-4">
-                Enabled $3M in assets for 70,000+ users and scaled trade volume to $1M+ within first year. Built AI-powered solutions achieving 98% faster query execution through strategic data analysis and technical innovation.
+                Enabled $3M in assets for 70,000+ users and scaled trade volume to $1M+ within first year. Built AI-powered solutions achieving 90% faster query execution through strategic data analysis and technical innovation.
               </p>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li className="flex gap-2">
@@ -332,11 +332,11 @@ export default function Home() {
                 <ul className="space-y-3 mt-6 text-muted-foreground">
                   <li className="flex gap-3">
                     <Zap className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                    <span>Achieved <strong className="text-foreground">98% faster SQL query execution</strong> using AI-powered Gemini optimization engine tested on 100+ queries including 22 TPC-H benchmarks</span>
+                    <span>Achieved <strong className="text-foreground">90% faster SQL query execution</strong> using AI-powered Gemini optimization engine tested on 100+ queries including 22 TPC-H benchmarks</span>
                   </li>
                   <li className="flex gap-3">
                     <Award className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                    <span>Led cross-functional team of <strong className="text-foreground">5 engineers and designers</strong>, won internal Google competition for further R&D and enterprise deployment</span>
+                    <span>Led cross-functional team of <strong className="text-foreground">5 engineers and designers</strong>, project recognised in an internal Google R&D reviews and recommended for enterprise deployment consideration</span>
                   </li>
                 </ul>
                 <CollapsibleTrigger asChild>
@@ -356,9 +356,9 @@ export default function Home() {
                       <ul className="space-y-1 text-sm">
                         <li>• Designed AI-powered SQL Query Optimization Engine using Gemini with sophisticated prompt engineering</li>
                         <li>• Tested on 100+ SQL queries including 22 TPC-H benchmarks to validate performance improvements</li>
-                        <li>• Achieved 98% faster query execution for optimized queries, reducing computational costs</li>
+                        <li>• Achieved 90% faster query execution for optimized queries, reducing computational costs</li>
                         <li>• Led cross-functional team of 5 engineers and designers</li>
-                        <li>• Won internal Google competition; platform under R&D for enterprise deployment</li>
+                        <li>• Project recognised in an internal Google R&D review and recommended for enterprise deployment consideration</li>
                       </ul>
                     </div>
                   </div>
@@ -564,7 +564,7 @@ export default function Home() {
                     AI Query Optimization
                   </h3>
                   <p className="text-sm text-muted-foreground mb-4">
-                    Gemini-powered SQL optimization achieving 98% faster execution times
+                    Gemini-powered SQL optimization achieving 90% faster execution times
                   </p>
                   <div className="inline-flex items-center gap-2 text-primary font-semibold text-sm">
                     Explore <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
