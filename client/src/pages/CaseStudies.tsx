@@ -165,7 +165,7 @@ export default function CaseStudies() {
                       </h3>
                       <p className="text-sm text-muted-foreground mb-4">Gemini-Powered SQL Optimization at Google</p>
                       <p className="text-muted-foreground mb-6 leading-relaxed line-clamp-3">
-                        An AI-powered SQL query optimization engine using Gemini that accelerates Google Ads infrastructure by achieving 98% faster query execution.
+                        An AI-powered SQL query optimization engine using Gemini that accelerates enterprise SQL infrastruture by achieving 90% faster query execution.
                       </p>
                     </div>
 
@@ -224,7 +224,7 @@ export default function CaseStudies() {
                         <h4 className="font-semibold text-foreground mb-3 text-lg">Key Achievements</h4>
                         <div className="grid md:grid-cols-4 gap-4 mb-6">
                           <div className="bg-primary/10 p-4 rounded-lg">
-                            <div className="text-2xl font-bold text-primary">98%</div>
+                            <div className="text-2xl font-bold text-primary">90%</div>
                             <div className="text-sm text-muted-foreground">Faster Execution</div>
                           </div>
                           <div className="bg-primary/10 p-4 rounded-lg">
@@ -243,13 +243,13 @@ export default function CaseStudies() {
                         <ul className="space-y-2">
                           <li className="flex gap-2"><span className="text-primary">•</span><span>Designed AI-powered SQL Query Optimization using Gemini with advanced prompt engineering techniques</span></li>
                           <li className="flex gap-2"><span className="text-primary">•</span><span>Led cross-functional team of 5 engineers and designers through product development and validation</span></li>
-                          <li className="flex gap-2"><span className="text-primary">•</span><span>Won internal Google competition for further R&D and enterprise-wide deployment</span></li>
+                          <li className="flex gap-2"><span className="text-primary">•</span><span>Project recognised in an internal Google R&D review and recommended for enterprise deployment consideration</span></li>
                         </ul>
                       </div>
                       
                       <div>
                         <h4 className="font-semibold text-foreground mb-3 text-lg">Impact & Future Deployment</h4>
-                        <p className="leading-relaxed">The platform is now under further R&D at Google and will be deployed enterprise-wide across Google Ads infrastructure. The 98% performance improvement translates to significant computational cost reduction and improved system responsiveness. This project demonstrates the power of AI in infrastructure optimization and how LLMs can be applied to complex technical problems like query optimization.</p>
+                        <p className="leading-relaxed">The project was recognised in an internal Google R&D review and recommended for enterprise deployment consideration. The 90% performance improvement demonstrates how AI can restructure infrastructure logic and not just accelerate existing processes.</p>
                       </div>
                     </div>
                   </div>
@@ -327,7 +327,7 @@ export default function CaseStudies() {
                         <ul className="space-y-3">
                           <li className="flex gap-3"><span className="text-primary font-bold">1.</span><span><strong>User Experience Simplicity:</strong> Theme-based baskets eliminate decision paralysis. Users choose risk appetite (Low/Medium/High) rather than individual coins. Auto-rebalancing removes ongoing management burden.</span></li>
                           <li className="flex gap-3"><span className="text-primary font-bold">2.</span><span><strong>Operational Resilience:</strong> 24/7 monitoring with sub-5-minute issue resolution. 99.2% accuracy in identity verification. 95% cold storage with BitGo custody ensures asset security.</span></li>
-                          <li className="flex gap-3"><span className="text-primary font-bold">3.</span><span><strong>Regulatory Compliance:</strong> SEC, FINRA, and GDPR compliant with automated reporting. Streamlined KYC/AML with 95% auto-approval rate. ISO 27001 and SOC 2 Type 2 certified identity management.</span></li>
+                          <li className="flex gap-3"><span className="text-primary font-bold">3.</span><span><strong>Regulatory Compliance:</strong> Compliant with Indian crypto regulatory framework and BACC guidelines. Automated KYC/AML verification workflows reducing manual review to exception-only cases. Implemented Auth0's ISO 27001 and SOC2 compliant identity management solution</span></li>
                         </ul>
                       </div>
                       
@@ -347,8 +347,8 @@ export default function CaseStudies() {
                             <div className="text-sm text-muted-foreground">Churn Reduction</div>
                           </div>
                           <div className="bg-primary/10 p-4 rounded-lg">
-                            <div className="text-2xl font-bold text-primary">95%</div>
-                            <div className="text-sm text-muted-foreground">Auto-Approval Rate</div>
+                            <div className="text-2xl font-bold text-primary">4.85/5</div>
+                            <div className="text-sm text-muted-foreground">CSAT Score</div>
                           </div>
                         </div>
                         <ul className="space-y-2">
