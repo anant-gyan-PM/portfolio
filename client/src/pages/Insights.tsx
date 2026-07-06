@@ -5,14 +5,16 @@ import { ArrowLeft, Clock, Calendar } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 
 export default function Insights() {
-  const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
+  const [selectedArticle, setSelectedArticle] = useState<string | null>(
+    () => new URLSearchParams(window.location.search).get('article')
+  );
 
   const articles = [
     {
       id: 'gtm-strategy',
       title: 'Building GTM Strategy for EdTech Products',
       category: 'GTM Strategy',
-      date: 'February 2024',
+      date: 'June 2026',
       readTime: '8 min read',
       excerpt: 'How to achieve product-market fit and scale adoption in underserved education markets.',
       thumbnail: 'https://private-us-east-1.manuscdn.com/sessionFile/ELzDsBUWidNcCJbqpfduYD/sandbox/mTiXRmr60qMQAMwdpr0yrA-img-1_1771972198000_na1fn_YXJ0aWNsZS1ndG0tc3RyYXRlZ3ktZWxldmF0ZQ.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvRUx6RHNCVVdpZE5jQ0picXBmZHVZRC9zYW5kYm94L21UaVhSbXI2MHFNUUFNd2RwcjB5ckEtaW1nLTFfMTc3MTk3MjE5ODAwMF9uYTFmbl9ZWEowYVdOc1pTMW5kRzB0YzNSeVlYUmxaM2t0Wld4bGRtRjBaUS5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=ob16cdbD7Y7sSTQBLpkXgorr1TvoZUqHA~tjJRhd6rlZrZ-c19e80u7MtJSo2732JQpFKHbYEvpKatNnb~~nFaVAAaNTkNnkl3QkPo8jgmRHRFW4iP2i24~6N9232IoJLcbMq2j4uAKXFeEO9aE8Lik1u6lRuByCgiiAvBqDM-Y4aMrCx6OlgH9S6yiFgfVhkJ2uDbMYt-v6Z505gB9MVXp41ZFiongI7L1y~e0juslHpmV5mcYj7cza1F6d-DR5uPIf4h3E3-bI0stC-SAnXTrRQiHaTVMF-jPsFLCUWgX5WgzRcRYkx4kfxbut-UXeXZrI14mxnnETELTa2WKXJA__',
@@ -43,7 +45,7 @@ export default function Insights() {
               <li className="text-base">Operational feasibility (time to integrate into curriculum)</li>
               <li className="text-base">Stakeholder satisfaction (NPS from teachers and administrators)</li>
             </ul>
-            <p className="text-base">This data became our proof point for scaling. When we approached 10 more districts, we didn't pitch; we showed results.</p>
+            <p className="text-base">This data became our proof point for scaling. When we approached the remaining districts to reach 20+ total, we didn't pitch; we showed results.</p>
           </div>
 
           <div className="mt-8">
@@ -78,7 +80,7 @@ export default function Insights() {
       id: 'fintech-operations',
       title: 'Operational Excellence in Fintech',
       category: 'Fintech Operations',
-      date: 'January 2024',
+      date: 'June 2025',
       readTime: '12 min read',
       excerpt: 'Why operational resilience is the secret weapon for fintech success.',
       thumbnail: 'https://private-us-east-1.manuscdn.com/sessionFile/ELzDsBUWidNcCJbqpfduYD/sandbox/7rBssow89K9kCRUu6m8irb-img-2_1771961696000_na1fn_YXJ0aWNsZS1maW50ZWNoLW9wcw.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvRUx6RHNCVVdpZE5jQ0picXBmZHVZRC9zYW5kYm94LzdyQnNzb3c4OUs5a0NSVXU2bThpcmItaW1nLTJfMTc3MTk2MTY5NjAwMF9uYTFmbl9ZWEowYVdOc1pTMW1hVzUwWldOb0xXOXdjdy5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=Bi64f5apdS2BVWeGKAC9oyvii4--4Dd2xyNDqsmIK2ygriSCaii0paduESDz4zfe-nUEQFpl19tSmz5ibhRTFOk7AfLWfqwCo1m9KW4jPv3t5R96d~t7WBxkREVbmNoYuLPsmccbT-6rFpMrqGu0HQPIciO-ZSTu~GBFqMdtIgXxXxMz9SFM6-SE9u4-yOn9qaGpzGEcwbYhl50Km8ZsiyEUobJKYIMmdKHhFYjioEId6Ff4A956xdY8mbK3zsyW1SLcVfFbZEypi0gpf3tPT4BBtYsFw6uA1JlodaM193FhRl-RmNvgi15cjCSDNJSHlQ8DSMdV9Buybg33k7KB1g__',
@@ -164,7 +166,7 @@ export default function Insights() {
       id: 'web3-innovation',
       title: 'Web3 Innovation: Opportunities and Challenges',
       category: 'Web3 Innovation',
-      date: 'December 2023',
+      date: 'August 2023',
       readTime: '9 min read',
       excerpt: 'Navigating the Web3 landscape: what works, what doesn\'t, and where the real opportunity lies.',
       thumbnail: 'https://private-us-east-1.manuscdn.com/sessionFile/ELzDsBUWidNcCJbqpfduYD/sandbox/7rBssow89K9kCRUu6m8irb-img-3_1771961695000_na1fn_YXJ0aWNsZS13ZWIz.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvRUx6RHNCVVdpZE5jQ0picXBmZHVZRC9zYW5kYm94LzdyQnNzb3c4OUs5a0NSVXU2bThpcmItaW1nLTNfMTc3MTk2MTY5NTAwMF9uYTFmbl9ZWEowYVdOc1pTMTNaV0l6LnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=n6he7f6~-hRjQ2WSKi5rVILc75EFWVAeNmqLziXM1NzmWMI02m9AznS4bd8s5CxFPayBJfIgPyHkRD-VYbS0RjSh9dcbcdOEP5642gWgk~lctshZfKPXmmRrNbK34q6rWaTTigRYUl89HGVemxMM7tYUlO0AA6MzOu8CamfkevfC1W6d1-iBPyG3FHqmHaHDb8sxaacVZkp778ctuUuGsRQuTZaYgJFYqNl-ij1Hp8dhTej190iaIMga9ceSTosi18yFgC5phv4Zb5k~FUk3mcj0Ru~7Kh71mRTRE4Y69vrUMlwe42itdJms8UPoOylKmOScpdQTN6yi6W1BvnJlFg__',
@@ -226,7 +228,7 @@ export default function Insights() {
       id: 'fintech-compliance',
       title: 'Fintech Compliance: Building Trust Through Regulation',
       category: 'Compliance & Regulation',
-      date: 'November 2023',
+      date: 'May 2023',
       readTime: '11 min read',
       excerpt: 'How to turn compliance from a cost center into a competitive advantage.',
       thumbnail: 'https://private-us-east-1.manuscdn.com/sessionFile/ELzDsBUWidNcCJbqpfduYD/sandbox/7rBssow89K9kCRUu6m8irb-img-4_1771961691000_na1fn_YXJ0aWNsZS1jb21wbGlhbmNl.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvRUx6RHNCVVdpZE5jQ0picXBmZHVZRC9zYW5kYm94LzdyQnNzb3c4OUs5a0NSVXU2bThpcmItaW1nLTRfMTc3MTk2MTY5MTAwMF9uYTFmbl9ZWEowYVdOc1pTMWpiMjF3YkdsaGJtTmwucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=umSu86nVQV5or3eBTJteSHcEjQMMxCO5YcLJ-kPwBuMM5OYl47meS2K2crpl1IsKRvpefmD0uQEgQF~9BWOJ27LEIh-015TQjWfEjTcNKY6sWNE4p20S3y21Vp7jYYx0VNWGVD9QuRjCfpvnmqzESOuWU729hSBKMtxI~FjCzMNW2eQ7a9XwjBuJ9izhAmSnPGcq4V6sAShBLFLxuJlSUsxTzYFLc5ithTASy5RtujJ6TpJZtpswyGZ~2nbTSgeucIQ7Fb3jsi-t9HFL4S5MbW~Uq5cx7TRwZgo-JRoenNWWXlVqf7SoSSTwo0z5CGc6dsSxgNspoffH-zCsH8o0ug__',
@@ -324,7 +326,10 @@ export default function Insights() {
         <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
           <div className="container py-4 flex items-center justify-between">
             <button
-              onClick={() => setSelectedArticle(null)}
+              onClick={() => {
+                window.history.replaceState(null, '', '/insights');
+                setSelectedArticle(null);
+              }}
               className="flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors"
             >
               <ArrowLeft className="w-4 h-4" />
@@ -389,7 +394,10 @@ export default function Insights() {
             {articles.map((article) => (
               <button
                 key={article.id}
-                onClick={() => setSelectedArticle(article.id)}
+                onClick={() => {
+                  window.history.replaceState(null, '', `/insights?article=${article.id}`);
+                  setSelectedArticle(article.id);
+                }}
                 className="group text-left hover:opacity-80 transition-opacity"
               >
                 <div className="bg-card rounded-lg overflow-hidden border border-border hover:border-primary transition-colors">

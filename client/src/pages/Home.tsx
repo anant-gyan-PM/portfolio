@@ -9,7 +9,8 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Collapsible, CollapsibleTrigger, CollapsibleContent } from "@/components/ui/collapsible";
-import { Mail, Linkedin, Phone, ExternalLink, Award, TrendingUp, Users, Zap, Shield, ChevronDown, ArrowRight } from "lucide-react";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { Mail, Linkedin, ExternalLink, Award, TrendingUp, Users, Zap, Shield, ChevronDown, ArrowRight } from "lucide-react";
 import { useState } from "react";
 
 export default function Home() {
@@ -49,10 +50,10 @@ export default function Home() {
             <div className="max-w-2xl">
             <div className="mb-6"></div>
             <h1 className="text-5xl lg:text-7xl mb-6 text-foreground leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
-              Product Manager
+              Product Operations Manager
             </h1>
             <p className="text-lg lg:text-xl mb-2 text-muted-foreground max-w-2xl" style={{ fontFamily: "'Lora', serif" }}>
-              Senior Fintech PM | KYC/AML . Custody . Payments . AI
+              8+ Years in Fintech & EdTech | KYC/AML . Custody . Payments . AI Automation
             </p>
             <p className="text-lg lg:text-xl mb-8 text-muted-foreground max-w-2xl" style={{ fontFamily: "'Lora', serif" }}>
               70k+ Users . $3M+ Assets | Wisconsin MBA
@@ -101,10 +102,10 @@ export default function Home() {
               </h2>
               <div className="prose prose-lg max-w-none">
                 <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-                  I build financial products from the inside out. Five years across crypto exchanges and fintech platforms taught me the infrastructure layer most PMs never touch i.e. KYC/AML, custody, reconciliation, compliance workflows. Now with AI at the center of how I work, I'm exploring what happens when AI moves into the financial logic itself and not just the workflow above it, but the decisioning underneath.
+                  I build the processes, systems, and cross-functional workflows that power and scale regulated financial products. Eight-plus years across trading, custody, compliance, and financial education taught me the infrastructure layer most PMs never touch i.e. KYC/AML, custody integration, reconciliation, and audit processes, across North American, European, and Asian markets.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  My experience spans fintech and edtech domains, where I've led cross-functional teams to deliver products that drive measurable business impact. From securing $250K in funding to enabling $3M in assets for 70,000+ users, I focus on building products that solve real problems and create lasting value.
+                  Lately I've been putting AI to work on the operations layer itself, automating grant research, reporting, and quantitative budget analysis for a non-profit using Claude. From securing $250K in funding to enabling $3M in assets for 70,000+ users, I focus on building the operational backbone that lets products scale without breaking.
                 </p>
               </div>
             </div>
@@ -114,7 +115,7 @@ export default function Home() {
                 Education
               </h3>
               <Card className="p-2 bg-background border-border">
-                <div style={{ lineHeight: '1', marginBottom: '0px' }} className="font-semibold text-sm text-foreground">MBA in Technology, Strategy & Product Management</div>
+                <div style={{ lineHeight: '1', marginBottom: '0px' }} className="font-semibold text-sm text-foreground">Master of Business Administration (MBA), Operations and Technology Management</div>
                 <div style={{ lineHeight: '1', marginTop: '-3px', marginBottom: '0px' }} className="text-sm text-muted-foreground">University of Wisconsin-Madison</div>
                 <div style={{ lineHeight: '1', marginTop: '-3px', marginBottom: '2px' }} className="text-sm text-muted-foreground">Graduated May 2025</div>
                 <div className="space-y-0">
@@ -134,6 +135,15 @@ export default function Home() {
                 <div style={{ lineHeight: '1', marginTop: '-3px' }} className="text-sm text-muted-foreground">Graduated 2016</div>
               </Card>
             </div>
+            <div className="space-y-2">
+              <h3 className="text-xl font-semibold text-foreground" style={{ fontFamily: "'Lora', serif" }}>
+                Certifications
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                <Badge variant="secondary">Certified Scrum Product Owner (CSPO)</Badge>
+                <Badge variant="secondary">Certified ScrumMaster (CSM)</Badge>
+              </div>
+            </div>
             </div>
           </div>
         </div>
@@ -151,7 +161,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* GTM Strategy */}
             <Card className="p-8 bg-card border-border hover:border-primary transition-colors">
               <div className="mb-6">
@@ -162,23 +172,23 @@ export default function Home() {
                 />
               </div>
               <h3 className="text-2xl font-semibold mb-4 text-foreground" style={{ fontFamily: "'Lora', serif" }}>
-                GTM Strategy
+                GTM Strategy & Operations
               </h3>
               <p className="text-muted-foreground mb-4">
-                Designed and executed go-to-market strategies for fintech and edtech products, securing $250K+ in funding and achieving 1,000+ DAUs within 25 days through structured market research and competitive positioning.
+                Led research and stakeholder interviews behind a successful $250K financial literacy grant, and built a 20+ member advisory board spanning tribal nations, financial institutions, and education to guide strategy and rollout.
               </p>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li className="flex gap-2">
                   <span className="text-primary">•</span>
-                  <span>Product-market fit validation</span>
+                  <span>RICE prioritization & GTM operations</span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-primary">•</span>
-                  <span>A/B testing & competitive analysis</span>
+                  <span>Vendor sourcing & negotiation</span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-primary">•</span>
-                  <span>Market research & user insights</span>
+                  <span>Product-led growth (PLG)</span>
                 </li>
               </ul>
             </Card>
@@ -196,20 +206,51 @@ export default function Home() {
                 Product Operations
               </h3>
               <p className="text-muted-foreground mb-4">
-                Built operational excellence frameworks reducing churn by 45%, improving issue resolution to under 5 minutes, and increasing onboarding efficiency by 50% through real-time monitoring and process automation.
+                Reduced KYC/AML verification time from 48 hours to under 30 seconds and cut incident acknowledgment to under 5 minutes through Slack-integrated monitoring, contributing to a 45% drop in user churn.
               </p>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li className="flex gap-2">
                   <span className="text-primary">•</span>
-                  <span>Process optimization & automation</span>
+                  <span>Process design, SOPs & incident response</span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-primary">•</span>
-                  <span>Real-time monitoring & controls</span>
+                  <span>Reconciliation & audit processes</span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-primary">•</span>
-                  <span>KPI tracking & performance metrics</span>
+                  <span>Onboarding operations & KPI/OKR tracking</span>
+                </li>
+              </ul>
+            </Card>
+
+            {/* AI & Automation */}
+            <Card className="p-8 bg-card border-border hover:border-primary transition-colors">
+              <div className="mb-6">
+                <img
+                  src="/images/ai-automation.png"
+                  alt="AI & Automation"
+                  className="w-full h-48 object-cover rounded-lg mb-4"
+                />
+              </div>
+              <h3 className="text-2xl font-semibold mb-4 text-foreground" style={{ fontFamily: "'Lora', serif" }}>
+                AI & Automation
+              </h3>
+              <p className="text-muted-foreground mb-4">
+                Built AI-powered workflows with Claude that cut operational overhead by 60% — automating grant research, application drafting, and quantitative budget analysis for a non-profit financial literacy platform.
+              </p>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li className="flex gap-2">
+                  <span className="text-primary">•</span>
+                  <span>Claude, Claude Code & Cursor CLI</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-primary">•</span>
+                  <span>Prompt & context engineering, LLM evaluation</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-primary">•</span>
+                  <span>AI-native & human-in-loop workflows</span>
                 </li>
               </ul>
             </Card>
@@ -227,20 +268,20 @@ export default function Home() {
                 Data-Driven Leadership
               </h3>
               <p className="text-muted-foreground mb-4">
-                Enabled $3M in assets for 70,000+ users and scaled trade volume to $1M+ within first year. Built AI-powered solutions achieving 90% faster query execution through strategic data analysis and technical innovation.
+                Owned the product lifecycle for an AI-driven portfolio rebalancing feature and BitGo custody integration, defining risk profiles from data (Sharpe ratio, volatility) to simplify UX for 70,000+ users managing $3M+ in assets.
               </p>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li className="flex gap-2">
                   <span className="text-primary">•</span>
-                  <span>MySQL & API integrations</span>
+                  <span>SQL, Tableau & MixPanel</span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-primary">•</span>
-                  <span>AI/ML & prompt engineering</span>
+                  <span>Unit economics (LTV/CAC) & KPI tracking</span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-primary">•</span>
-                  <span>Analytics & business intelligence</span>
+                  <span>Custody integration & risk modeling</span>
                 </li>
               </ul>
             </Card>
@@ -251,264 +292,277 @@ export default function Home() {
       {/* Professional Experience Section */}
       <section id="experience" className="py-20 bg-card">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-4xl lg:text-5xl mb-4 text-foreground" style={{ fontFamily: "'Playfair Display', serif" }}>
-              Professional Experience
+              Experience
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto" style={{ fontFamily: "'Lora', serif" }}>
               Building products that drive measurable impact
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
-            {/* Asset Builders */}
-            <Collapsible open={expandedExperience === 'asset-builders'} onOpenChange={(open) => setExpandedExperience(open ? 'asset-builders' : null)}>
-              <Card className="p-6 bg-background border-border hover:border-primary transition-colors">
-                <div className="text-left">
-                  <h3 className="text-2xl font-semibold text-foreground mb-1" style={{ fontFamily: "'Lora', serif" }}>
-                    Product Manager
-                  </h3>
-                  <div className="text-lg text-primary font-medium">Asset Builders of America (Edtech)</div>
-                  <div className="text-sm text-muted-foreground mt-2">06/2025 - Present</div>
-                  <a href="/case-studies" className="text-sm font-semibold mt-3 inline-block" style={{ color: '#2D5016' }}>
-                    Access Case Study →
-                  </a>
-                </div>
-                <ul className="space-y-3 mt-6 text-muted-foreground">
-                  <li className="flex gap-3">
-                    <TrendingUp className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                    <span>Secured <strong className="text-foreground">$250K in funding</strong> through structured advisory board approach with credit unions, corporations, and Wisconsin state officials</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <Award className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                    <span>Executed GTM strategy earning <strong className="text-foreground">Wisconsin Governor's Award for Financial Literacy</strong> and scaling to 10 school districts</span>
-                  </li>
-                </ul>
-                <CollapsibleTrigger asChild>
-                  <p className="mt-6 font-bold cursor-pointer text-left" style={{ color: '#2D5016' }}>
-                    Learn More About This Experience
-                  </p>
-                </CollapsibleTrigger>
-              </Card>
-              <CollapsibleContent className="mt-2">
-                <Card className="p-6 bg-background border border-primary/20">
-                  <div className="space-y-4 text-muted-foreground">
-                    <p>
-                      Leading the go-to-market strategy for ELEVATE Wisconsin, a financial literacy platform designed to empower K-12 students and school staff in rural and tribal communities with personal finance knowledge. Responsible for market validation, advisory board development, pilot execution, and scaling adoption across school districts.
-                    </p>
-                    <div>
-                      <p className="font-medium text-foreground mb-2">Key Achievements:</p>
-                      <ul className="space-y-1 text-sm">
-                        <li>• Structured advisory board with credit unions, corporations, and Wisconsin state government officials for market credibility</li>
-                        <li>• Executed pilot program training 25 teachers across rural and tribal communities</li>
-                        <li>• Secured 10 school districts as pilot projects with multiplier effect (teachers training staff)</li>
-                        <li>• Secured $250K in funding through strategic positioning and impact metrics</li>
-                        <li>• Won Wisconsin Governor's Award for Financial Literacy</li>
-                      </ul>
+          <Tabs defaultValue="professional" className="max-w-6xl mx-auto">
+            <div className="flex justify-center mb-10">
+              <TabsList>
+                <TabsTrigger value="professional" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">Professional Experience</TabsTrigger>
+                <TabsTrigger value="internship" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">Experiential Learning</TabsTrigger>
+              </TabsList>
+            </div>
+
+            <TabsContent value="professional">
+              <div className="grid lg:grid-cols-2 gap-6">
+                {/* Asset Builders */}
+                <Collapsible open={expandedExperience === 'asset-builders'} onOpenChange={(open) => setExpandedExperience(open ? 'asset-builders' : null)}>
+                  <Card className="p-6 bg-background border-border hover:border-primary transition-colors">
+                    <div className="text-left">
+                      <h3 className="text-2xl font-semibold text-foreground mb-1" style={{ fontFamily: "'Lora', serif" }}>
+                        Product Operations Manager
+                      </h3>
+                      <div className="text-lg text-primary font-medium">Asset Builders of America (Edtech)</div>
+                      <div className="text-sm text-muted-foreground mt-2">06/2025 - Present</div>
+                      <a href="/case-studies?study=elevate" className="text-sm font-semibold mt-3 inline-block" style={{ color: '#2D5016' }}>
+                        Access Case Study →
+                      </a>
                     </div>
-                    <div className="pt-4 border-t border-border">
-                      <p className="text-sm">
-                        <strong>See the case study:</strong> <a href="#projects" className="text-primary hover:underline">ELEVATE Wisconsin Financial Wellness Program →</a>
+                    <ul className="space-y-3 mt-6 text-muted-foreground">
+                      <li className="flex gap-3">
+                        <Zap className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                        <span>Built <strong className="text-foreground">AI-powered workflows</strong> that cut operational overhead <strong className="text-foreground">60%</strong> by automating grant research, application drafting, and budget generation</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <TrendingUp className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                        <span>Led research behind a successful <strong className="text-foreground">$250K financial literacy grant</strong> and built a 20+ member advisory group spanning tribal nations, financial institutions, and education</span>
+                      </li>
+                    </ul>
+                    <CollapsibleTrigger asChild>
+                      <p className="mt-6 font-bold cursor-pointer text-left" style={{ color: '#2D5016' }}>
+                        Learn More About This Experience
                       </p>
-                    </div>
-                  </div>
-                </Card>
-              </CollapsibleContent>
-            </Collapsible>
+                    </CollapsibleTrigger>
+                  </Card>
+                  <CollapsibleContent className="mt-2">
+                    <Card className="p-6 bg-background border border-primary/20">
+                      <div className="space-y-4 text-muted-foreground">
+                        <p>
+                          Leading product operations for ELEVATE Wisconsin, a financial literacy platform designed to empower K-12 students and school staff in rural and tribal communities with personal finance knowledge. Responsible for AI-driven process automation, advisory board development, grant strategy, and scaling adoption across school districts and government systems.
+                        </p>
+                        <div>
+                          <p className="font-medium text-foreground mb-2">Key Achievements:</p>
+                          <ul className="space-y-1 text-sm">
+                            <li>• Built AI-powered workflows that cut operational overhead 60% by automating grant research (surfacing top 10 matches with overviews and contacts), drafting grant applications, and generating budgets from historical spending analysis</li>
+                            <li>• Scaled two financial literacy training initiatives — Teacher Training and the Financial Wellness Champion Training — to a projected reach of 8,000+ individuals across 20+ school districts with AI-driven onboarding</li>
+                            <li>• Led research and stakeholder interviews behind a successful $250K financial literacy grant and built a 20+ member advisory group spanning tribal nations, financial institutions, and education to guide strategy and provide LORs</li>
+                            <li>• Spearheading expansion of the Financial Wellness Champion Training to state, county, local government, colleges, and university systems — scoping rollout across 1,500+ departments in Wisconsin</li>
+                          </ul>
+                        </div>
+                        <div className="pt-4 border-t border-border">
+                          <p className="text-sm">
+                            <strong>See the case study:</strong> <a href="#projects" className="text-primary hover:underline">ELEVATE Wisconsin Financial Wellness Program →</a>
+                          </p>
+                        </div>
+                      </div>
+                    </Card>
+                  </CollapsibleContent>
+                </Collapsible>
 
-            {/* Google */}
-            <Collapsible open={expandedExperience === 'google'} onOpenChange={(open) => setExpandedExperience(open ? 'google' : null)}>
-              <Card className="p-6 bg-background border-border hover:border-primary transition-colors">
-                <div className="text-left">
-                  <h3 className="text-2xl font-semibold text-foreground mb-1" style={{ fontFamily: "'Lora', serif" }}>
-                    Product Manager (Industry Project)
-                  </h3>
-                  <div className="text-lg text-primary font-medium">Google</div>
-                  <div className="text-sm text-muted-foreground mt-2">09/2024 - 12/2024</div>
-                  <a href="/case-studies" className="text-sm font-semibold mt-3 inline-block" style={{ color: '#2D5016' }}>
-                    Access Case Study →
-                  </a>
-                </div>
-                <ul className="space-y-3 mt-6 text-muted-foreground">
-                  <li className="flex gap-3">
-                    <Zap className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                    <span>Achieved <strong className="text-foreground">90% faster SQL query execution</strong> using AI-powered Gemini optimization engine tested on 100+ queries including 22 TPC-H benchmarks</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <Award className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                    <span>Led cross-functional team of <strong className="text-foreground">5 engineers and designers</strong>, project recognised in an internal Google R&D reviews and recommended for enterprise deployment consideration</span>
-                  </li>
-                </ul>
-                <CollapsibleTrigger asChild>
-                  <p className="mt-6 font-bold cursor-pointer text-left" style={{ color: '#2D5016' }}>
-                    Learn More About This Experience
-                  </p>
-                </CollapsibleTrigger>
-              </Card>
-              <CollapsibleContent className="mt-2">
-                <Card className="p-6 bg-background border border-primary/20">
-                  <div className="space-y-4 text-muted-foreground">
-                    <p>
-                      Led product development for an AI-powered SQL query optimization engine designed to accelerate Google Ads infrastructure. Managed a team of 5 engineers and designers to build, test, and validate the platform using Gemini AI for query optimization.
-                    </p>
-                    <div>
-                      <p className="font-medium text-foreground mb-2">Key Achievements:</p>
-                      <ul className="space-y-1 text-sm">
-                        <li>• Designed AI-powered SQL Query Optimization Engine using Gemini with sophisticated prompt engineering</li>
-                        <li>• Tested on 100+ SQL queries including 22 TPC-H benchmarks to validate performance improvements</li>
-                        <li>• Achieved 90% faster query execution for optimized queries, reducing computational costs</li>
-                        <li>• Led cross-functional team of 5 engineers and designers</li>
-                        <li>• Project recognised in an internal Google R&D review and recommended for enterprise deployment consideration</li>
-                      </ul>
+                {/* Cryptosmartlife */}
+                <Collapsible open={expandedExperience === 'cryptosmartlife'} onOpenChange={(open) => setExpandedExperience(open ? 'cryptosmartlife' : null)}>
+                  <Card className="p-6 bg-background border-border hover:border-primary transition-colors">
+                    <div className="text-left">
+                      <h3 className="text-2xl font-semibold text-foreground mb-1" style={{ fontFamily: "'Lora', serif" }}>
+                        Product Operations Manager
+                      </h3>
+                      <div className="text-lg text-primary font-medium">Cryptosmartlife (Fintech)</div>
+                      <div className="text-sm text-muted-foreground mt-2">04/2021 - 08/2023</div>
+                      <a href="/case-studies?study=crypto" className="text-sm font-semibold mt-3 inline-block" style={{ color: '#2D5016' }}>
+                        Access Case Study →
+                      </a>
                     </div>
-                  </div>
-                </Card>
-              </CollapsibleContent>
-            </Collapsible>
-
-            {/* Smart Charging Technology */}
-            <Collapsible open={expandedExperience === 'smart-charging'} onOpenChange={(open) => setExpandedExperience(open ? 'smart-charging' : null)}>
-              <Card className="p-6 bg-background border-border hover:border-primary transition-colors">
-                <div className="text-left">
-                  <h3 className="text-2xl font-semibold text-foreground mb-1" style={{ fontFamily: "'Lora', serif" }}>
-                    Product Manager (IoT Intern)
-                  </h3>
-                  <div className="text-lg text-primary font-medium">Smart Charging Technology</div>
-                  <div className="text-sm text-muted-foreground mt-2">06/2024 - 08/2024</div>
-                </div>
-                <ul className="space-y-3 mt-6 text-muted-foreground">
-                  <li className="flex gap-3">
-                    <Users className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                    <span>Secured <strong className="text-foreground">5 enterprise clients</strong> through structured discovery sessions with 30+ CXOs across Europe and Central America</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <TrendingUp className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                    <span>Identified <strong className="text-foreground">60+ high-fit prospects</strong> by analyzing 75+ companies and validating strong product-market fit</span>
-                  </li>
-                </ul>
-                <CollapsibleTrigger asChild>
-                  <p className="mt-6 font-bold cursor-pointer text-left" style={{ color: '#2D5016' }}>
-                    Learn More About This Experience
-                  </p>
-                </CollapsibleTrigger>
-              </Card>
-              <CollapsibleContent className="mt-2">
-                <Card className="p-6 bg-background border border-primary/20">
-                  <div className="space-y-4 text-muted-foreground">
-                    <p>
-                      Drove early-stage customer discovery and GTM strategy for an IoT-based smart charging platform. Conducted structured interviews with enterprise decision-makers across Europe and Central America to validate product-market fit and identify high-potential customers.
-                    </p>
-                    <div>
-                      <p className="font-medium text-foreground mb-2">Key Achievements:</p>
-                      <ul className="space-y-1 text-sm">
-                        <li>• Secured 5 enterprise clients through structured discovery sessions with 30+ CXOs</li>
-                        <li>• Identified 60+ high-fit prospects by analyzing 75+ companies and mapping pain points</li>
-                        <li>• Validated strong product-market fit across Europe and Central America</li>
-                        <li>• Shaped GTM strategy and product roadmap based on customer insights</li>
-                      </ul>
-                    </div>
-                  </div>
-                </Card>
-              </CollapsibleContent>
-            </Collapsible>
-
-            {/* Cryptosmartlife */}
-            <Collapsible open={expandedExperience === 'cryptosmartlife'} onOpenChange={(open) => setExpandedExperience(open ? 'cryptosmartlife' : null)}>
-              <Card className="p-6 bg-background border-border hover:border-primary transition-colors">
-                <div className="text-left">
-                  <h3 className="text-2xl font-semibold text-foreground mb-1" style={{ fontFamily: "'Lora', serif" }}>
-                    Product Manager
-                  </h3>
-                  <div className="text-lg text-primary font-medium">Cryptosmartlife (Fintech)</div>
-                  <div className="text-sm text-muted-foreground mt-2">04/2021 - 08/2023</div>
-                  <a href="/case-studies" className="text-sm font-semibold mt-3 inline-block" style={{ color: '#2D5016' }}>
-                    Access Case Study →
-                  </a>
-                </div>
-                <ul className="space-y-3 mt-6 text-muted-foreground">
-                  <li className="flex gap-3">
-                    <TrendingUp className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                    <span>Managed <strong className="text-foreground">$3M+ in assets</strong> for 70,000+ users with institutional-grade security and reduced churn by <strong className="text-foreground">45%</strong></span>
-                  </li>
-                  <li className="flex gap-3">
-                    <Shield className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                    <span>Improved issue resolution to <strong className="text-foreground">under 5 minutes</strong> and increased onboarding efficiency by <strong className="text-foreground">50%</strong> through KYC/AML redesign</span>
-                  </li>
-                </ul>
-                <CollapsibleTrigger asChild>
-                  <p className="mt-6 font-bold cursor-pointer text-left" style={{ color: '#2D5016' }}>
-                    Learn More About This Experience
-                  </p>
-                </CollapsibleTrigger>
-              </Card>
-              <CollapsibleContent className="mt-2">
-                <Card className="p-6 bg-background border border-primary/20">
-                  <div className="space-y-4 text-muted-foreground">
-                    <p>
-                      Led end-to-end product development for a cryptocurrency investment platform managing $3M+ in assets. Responsible for product strategy, operations, compliance, and cross-functional team coordination to deliver institutional-grade security and compliance.
-                    </p>
-                    <div>
-                      <p className="font-medium text-foreground mb-2">Key Achievements:</p>
-                      <ul className="space-y-1 text-sm">
-                        <li>• Managed $3M+ in assets for 70,000+ active users with institutional-grade security</li>
-                        <li>• Reduced churn by 45% through operational resilience and real-time monitoring</li>
-                        <li>• Improved issue resolution time to under 5 minutes with 24/7 operational dashboards</li>
-                        <li>• Increased onboarding efficiency by 50% through KYC/AML workflow redesign</li>
-                        <li>• Achieved 1,000+ DAUs within 25 days of launch through A/B-tested GTM strategies</li>
-                      </ul>
-                    </div>
-                    <div className="pt-4 border-t border-border">
-                      <p className="text-sm">
-                        <strong>See the full case study:</strong> <a href="#projects" className="text-primary hover:underline">CryptoSmartlife Featured Case Study →</a>
+                    <ul className="space-y-3 mt-6 text-muted-foreground">
+                      <li className="flex gap-3">
+                        <Shield className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                        <span>Reduced <strong className="text-foreground">KYC/AML verification time from 48 hours to under 30 seconds</strong> via vendor partnership, lifting CSAT from 4.1 to 4.85</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <TrendingUp className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                        <span>Owned product lifecycle for AI-driven portfolio rebalancing and BitGo custody integration, managing <strong className="text-foreground">$3M+ in assets</strong> for 70,000+ users</span>
+                      </li>
+                    </ul>
+                    <CollapsibleTrigger asChild>
+                      <p className="mt-6 font-bold cursor-pointer text-left" style={{ color: '#2D5016' }}>
+                        Learn More About This Experience
                       </p>
-                    </div>
+                    </CollapsibleTrigger>
+                  </Card>
+                  <CollapsibleContent className="mt-2">
+                    <Card className="p-6 bg-background border border-primary/20">
+                      <div className="space-y-4 text-muted-foreground">
+                        <p>
+                          Led end-to-end product operations for a cryptocurrency investment platform managing $3M+ in assets. Responsible for vendor sourcing, incident response systems, reconciliation processes, and the product lifecycle for AI-driven portfolio and custody features.
+                        </p>
+                        <div>
+                          <p className="font-medium text-foreground mb-2">Key Achievements:</p>
+                          <ul className="space-y-1 text-sm">
+                            <li>• Reduced KYC/AML verification time from 48 hours to under 30 seconds by sourcing, negotiating, and implementing a vendor partnership that automated the KYC/AML process, improving onboarding completion and lifting CSAT from 4.1 to 4.85</li>
+                            <li>• Built a Slack-integrated API monitoring system that cut incident acknowledgment to under 5 minutes, contributing to a 45% drop in user churn alongside KYC/AML success rate improvements</li>
+                            <li>• Identified a 0.2% fee discrepancy across all transactions during quarterly reconciliation, traced the root-cause fee logic bug, and implemented automated weekly reconciliation to prevent recurrence</li>
+                            <li>• Owned the product lifecycle for an AI-driven portfolio rebalancing feature and BitGo custody integration — defining three risk profiles from data (Sharpe ratio, volatility) and simplifying the UX for 70,000+ users with $3M in assets</li>
+                          </ul>
+                        </div>
+                        <div className="pt-4 border-t border-border">
+                          <p className="text-sm">
+                            <strong>See the full case study:</strong> <a href="#projects" className="text-primary hover:underline">CryptoSmartlife Featured Case Study →</a>
+                          </p>
+                        </div>
+                      </div>
+                    </Card>
+                  </CollapsibleContent>
+                </Collapsible>
+
+                {/* DCEX */}
+                <Card className="p-6 bg-background border-border">
+                  <div className="text-left">
+                    <h3 className="text-2xl font-semibold text-foreground mb-1" style={{ fontFamily: "'Lora', serif" }}>
+                      Product Operations Lead
+                    </h3>
+                    <div className="text-lg text-primary font-medium">DCEX (Fintech)</div>
+                    <div className="text-sm text-muted-foreground mt-2">01/2019 - 04/2021</div>
                   </div>
+                  <ul className="space-y-3 mt-6 text-muted-foreground">
+                    <li className="flex gap-3">
+                      <TrendingUp className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span>Launched crypto exchange and onboarded <strong className="text-foreground">5,000+ verified customers in 3 months</strong> by designing mobile-first KYC/AML verification, coordinating dev and QA for regulatory compliance, and achieving near-defect-free releases</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <Users className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span>Scaled crypto token listings from <strong className="text-foreground">20 to 100</strong> by standardizing API schemas and mapping with liquidity providers, reducing listing time from a week to 1 day</span>
+                    </li>
+                  </ul>
                 </Card>
-              </CollapsibleContent>
-            </Collapsible>
 
-            {/* DCEX */}
-            <Card className="p-6 bg-background border-border">
-              <div className="text-left">
-                <h3 className="text-2xl font-semibold text-foreground mb-1" style={{ fontFamily: "'Lora', serif" }}>
-                  Associate Product Manager
-                </h3>
-                <div className="text-lg text-primary font-medium">DCEX (Fintech)</div>
-                <div className="text-sm text-muted-foreground mt-2">01/2019 - 12/2020</div>
+                {/* TCS */}
+                <Card className="p-6 bg-background border-border">
+                  <div className="text-left">
+                    <h3 className="text-2xl font-semibold text-foreground mb-1" style={{ fontFamily: "'Lora', serif" }}>
+                      System Engineer
+                    </h3>
+                    <div className="text-lg text-primary font-medium">Tata Consultancy Services (Consulting)</div>
+                    <div className="text-sm text-muted-foreground mt-2">08/2016 - 11/2018</div>
+                  </div>
+                  <ul className="space-y-3 mt-6 text-muted-foreground">
+                    <li className="flex gap-3">
+                      <TrendingUp className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span>Redesigned <strong className="text-foreground">Pepsico's support architecture</strong>, eliminating redundancy while maintaining quality standards and improving system performance by <strong className="text-foreground">25%</strong></span>
+                    </li>
+                    <li className="flex gap-3">
+                      <Users className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span>Trained <strong className="text-foreground">20+ team members</strong> and built a troubleshooting knowledge base and guidebook for technical support tickets, reducing SLA breach incidents by <strong className="text-foreground">30%</strong></span>
+                    </li>
+                  </ul>
+                </Card>
               </div>
-              <ul className="space-y-3 mt-6 text-muted-foreground">
-                <li className="flex gap-3">
-                  <TrendingUp className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                  <span>Launched OTC trading platform and scaled to <strong className="text-foreground">$1M+ annual trade volume</strong> by optimizing execution flows, pricing models, and user experience</span>
-                </li>
-                <li className="flex gap-3">
-                  <Users className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                  <span>Grew user base to <strong className="text-foreground">5,000 users in 3 months</strong> by designing mobile-first KYC/AML onboarding flows and ensuring defect-free product quality through rigorous QA coordination</span>
-                </li>
-              </ul>
-            </Card>
+            </TabsContent>
 
-            {/* TCS */}
-            <Card className="p-6 bg-background border-border">
-              <div className="text-left">
-                <h3 className="text-2xl font-semibold text-foreground mb-1" style={{ fontFamily: "'Lora', serif" }}>
-                  System Engineer
-                </h3>
-                <div className="text-lg text-primary font-medium">Tata Consultancy Services (Consulting)</div>
-                <div className="text-sm text-muted-foreground mt-2">08/2016 - 11/2018</div>
+            <TabsContent value="internship">
+              <div className="grid lg:grid-cols-2 gap-6">
+                {/* Google */}
+                <Collapsible open={expandedExperience === 'google'} onOpenChange={(open) => setExpandedExperience(open ? 'google' : null)}>
+                  <Card className="p-6 bg-background border-border hover:border-primary transition-colors">
+                    <div className="text-left">
+                      <h3 className="text-2xl font-semibold text-foreground mb-1" style={{ fontFamily: "'Lora', serif" }}>
+                        Product Manager (Industry Project)
+                      </h3>
+                      <div className="text-lg text-primary font-medium">Google</div>
+                      <div className="text-sm text-muted-foreground mt-2">09/2024 - 12/2024</div>
+                      <a href="/case-studies?study=google" className="text-sm font-semibold mt-3 inline-block" style={{ color: '#2D5016' }}>
+                        Access Case Study →
+                      </a>
+                    </div>
+                    <ul className="space-y-3 mt-6 text-muted-foreground">
+                      <li className="flex gap-3">
+                        <Zap className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                        <span>Achieved <strong className="text-foreground">90% faster SQL query execution</strong> using AI-powered Gemini optimization engine tested on 100+ queries including 22 TPC-H benchmarks</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <Award className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                        <span>Led cross-functional team of <strong className="text-foreground">5 engineers and designers</strong>, project recognised in an internal Google R&D reviews and recommended for enterprise deployment consideration</span>
+                      </li>
+                    </ul>
+                    <CollapsibleTrigger asChild>
+                      <p className="mt-6 font-bold cursor-pointer text-left" style={{ color: '#2D5016' }}>
+                        Learn More About This Experience
+                      </p>
+                    </CollapsibleTrigger>
+                  </Card>
+                  <CollapsibleContent className="mt-2">
+                    <Card className="p-6 bg-background border border-primary/20">
+                      <div className="space-y-4 text-muted-foreground">
+                        <p>
+                          Led product development for an AI-powered SQL query optimization engine designed to accelerate Google Ads infrastructure. Managed a team of 5 engineers and designers to build, test, and validate the platform using Gemini AI for query optimization.
+                        </p>
+                        <div>
+                          <p className="font-medium text-foreground mb-2">Key Achievements:</p>
+                          <ul className="space-y-1 text-sm">
+                            <li>• Designed AI-powered SQL Query Optimization Engine using Gemini with sophisticated prompt engineering</li>
+                            <li>• Tested on 100+ SQL queries including 22 TPC-H benchmarks to validate performance improvements</li>
+                            <li>• Achieved 90% faster query execution for optimized queries, reducing computational costs</li>
+                            <li>• Led cross-functional team of 5 engineers and designers</li>
+                            <li>• Project recognised in an internal Google R&D review and recommended for enterprise deployment consideration</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </Card>
+                  </CollapsibleContent>
+                </Collapsible>
+
+                {/* Smart Charging Technology */}
+                <Collapsible open={expandedExperience === 'smart-charging'} onOpenChange={(open) => setExpandedExperience(open ? 'smart-charging' : null)}>
+                  <Card className="p-6 bg-background border-border hover:border-primary transition-colors">
+                    <div className="text-left">
+                      <h3 className="text-2xl font-semibold text-foreground mb-1" style={{ fontFamily: "'Lora', serif" }}>
+                        Product Manager (IoT Intern)
+                      </h3>
+                      <div className="text-lg text-primary font-medium">Smart Charging Technology</div>
+                      <div className="text-sm text-muted-foreground mt-2">06/2024 - 08/2024</div>
+                    </div>
+                    <ul className="space-y-3 mt-6 text-muted-foreground">
+                      <li className="flex gap-3">
+                        <Users className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                        <span>Secured <strong className="text-foreground">5 enterprise clients</strong> through structured discovery sessions with 30+ CXOs across Europe and Central America</span>
+                      </li>
+                      <li className="flex gap-3">
+                        <TrendingUp className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                        <span>Identified <strong className="text-foreground">60+ high-fit prospects</strong> by analyzing 75+ companies and validating strong product-market fit</span>
+                      </li>
+                    </ul>
+                    <CollapsibleTrigger asChild>
+                      <p className="mt-6 font-bold cursor-pointer text-left" style={{ color: '#2D5016' }}>
+                        Learn More About This Experience
+                      </p>
+                    </CollapsibleTrigger>
+                  </Card>
+                  <CollapsibleContent className="mt-2">
+                    <Card className="p-6 bg-background border border-primary/20">
+                      <div className="space-y-4 text-muted-foreground">
+                        <p>
+                          Drove early-stage customer discovery and GTM strategy for an IoT-based smart charging platform. Conducted structured interviews with enterprise decision-makers across Europe and Central America to validate product-market fit and identify high-potential customers.
+                        </p>
+                        <div>
+                          <p className="font-medium text-foreground mb-2">Key Achievements:</p>
+                          <ul className="space-y-1 text-sm">
+                            <li>• Secured 5 enterprise clients through structured discovery sessions with 30+ CXOs</li>
+                            <li>• Identified 60+ high-fit prospects by analyzing 75+ companies and mapping pain points</li>
+                            <li>• Validated strong product-market fit across Europe and Central America</li>
+                            <li>• Shaped GTM strategy and product roadmap based on customer insights</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </Card>
+                  </CollapsibleContent>
+                </Collapsible>
               </div>
-              <ul className="space-y-3 mt-6 text-muted-foreground">
-                <li className="flex gap-3">
-                  <TrendingUp className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                  <span>Enhanced system performance by <strong className="text-foreground">25%</strong> and reduced incident response time by <strong className="text-foreground">30%</strong> through redesigning support workflows and implementing architecture for Fortune 500 FMCG client</span>
-                </li>
-                <li className="flex gap-3">
-                  <Users className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                  <span>Trained and led <strong className="text-foreground">20-member cross-functional team</strong> to execute system optimization initiatives and maintain operational excellence</span>
-                </li>
-              </ul>
-            </Card>
-          </div>
+            </TabsContent>
+          </Tabs>
         </div>
       </section>
 
@@ -526,7 +580,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {/* ELEVATE Wisconsin */}
-            <a href="/case-studies" className="group">
+            <a href="/case-studies?study=elevate" className="group">
               <Card className="overflow-hidden bg-background border-border hover:border-primary transition-all hover:shadow-lg">
                 <div className="h-48 overflow-hidden bg-muted">
                   <img 
@@ -550,7 +604,7 @@ export default function Home() {
             </a>
 
             {/* Google Query Optimization */}
-            <a href="/case-studies" className="group">
+            <a href="/case-studies?study=google" className="group">
               <Card className="overflow-hidden bg-background border-border hover:border-primary transition-all hover:shadow-lg">
                 <div className="h-48 overflow-hidden bg-muted">
                   <img 
@@ -574,7 +628,7 @@ export default function Home() {
             </a>
 
             {/* CryptoSmartlife */}
-            <a href="/case-studies" className="group">
+            <a href="/case-studies?study=crypto" className="group">
               <Card className="overflow-hidden bg-background border-border hover:border-primary transition-all hover:shadow-lg">
                 <div className="h-48 overflow-hidden bg-muted">
                   <img 
@@ -616,7 +670,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {/* Article 1 */}
-            <a href="/insights" className="group">
+            <a href="/insights?article=gtm-strategy" className="group">
               <div className="rounded-lg overflow-hidden mb-4 h-48 bg-card">
                 <img src="https://private-us-east-1.manuscdn.com/sessionFile/ELzDsBUWidNcCJbqpfduYD/sandbox/7rBssow89K9kCRUu6m8irb-img-1_1771961696000_na1fn_YXJ0aWNsZS1ndG0tc3RyYXRlZ3k.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvRUx6RHNCVVdpZE5jQ0picXBmZHVZRC9zYW5kYm94LzdyQnNzb3c4OUs5a0NSVXU2bThpcmItaW1nLTFfMTc3MTk2MTY5NjAwMF9uYTFmbl9ZWEowYVdOc1pTMW5kRzB0YzNSeVlYUmxaM2sucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=VLgpGzLmJ7OGqx4ZzDz89aMraC9uky9tT7e-gYZ~QSRHC1I~7jUrWagPiuF5Yd2mXUNLIrHjHjpF~DneMj6~a0Kin8j3EL72Y7W1ib1KcX~PaSdjH9thXVPl5WuodYbViXxl2cQzU1NPQdFwJA5ihkll21i-FhQhUM5uvGU47JUX-JC3zFR4GzjiXWMrZ8v6h0rHNgf~741DGlIgLLvdiJUr4~8K244sx9CO5XcIJURvtU9T-2hBNihpYI3fsje7Xne0eI3D1AqABiKbxHk606dER890XNE-CAKh77v1~Am-x3IO9TPdaif9dc44jqSIv9qoWxfqoYsVwmPJS~hYQQ__" alt="EdTech GTM Strategy" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
               </div>
@@ -631,7 +685,7 @@ export default function Home() {
             </a>
 
             {/* Article 2 */}
-            <a href="/insights" className="group">
+            <a href="/insights?article=fintech-operations" className="group">
               <div className="rounded-lg overflow-hidden mb-4 h-48 bg-card">
                 <img src="https://private-us-east-1.manuscdn.com/sessionFile/ELzDsBUWidNcCJbqpfduYD/sandbox/7rBssow89K9kCRUu6m8irb-img-2_1771961696000_na1fn_YXJ0aWNsZS1maW50ZWNoLW9wcw.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvRUx6RHNCVVdpZE5jQ0picXBmZHVZRC9zYW5kYm94LzdyQnNzb3c4OUs5a0NSVXU2bThpcmItaW1nLTJfMTc3MTk2MTY5NjAwMF9uYTFmbl9ZWEowYVdOc1pTMW1hVzUwWldOb0xXOXdjdy5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=Bi64f5apdS2BVWeGKAC9oyvii4--4Dd2xyNDqsmIK2ygriSCaii0paduESDz4zfe-nUEQFpl19tSmz5ibhRTFOk7AfLWfqwCo1m9KW4jPv3t5R96d~t7WBxkREVbmNoYuLPsmccbT-6rFpMrqGu0HQPIciO-ZSTu~GBFqMdtIgXxXxMz9SFM6-SE9u4-yOn9qaGpzGEcwbYhl50Km8ZsiyEUobJKYIMmdKHhFYjioEId6Ff4A956xdY8mbK3zsyW1SLcVfFbZEypi0gpf3tPT4BBtYsFw6uA1JlodaM193FhRl-RmNvgi15cjCSDNJSHlQ8DSMdV9Buybg33k7KB1g__" alt="Fintech Operations" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
               </div>
@@ -646,7 +700,7 @@ export default function Home() {
             </a>
 
             {/* Article 3 */}
-            <a href="/insights" className="group">
+            <a href="/insights?article=web3-innovation" className="group">
               <div className="rounded-lg overflow-hidden mb-4 h-48 bg-card">
                 <img src="https://private-us-east-1.manuscdn.com/sessionFile/ELzDsBUWidNcCJbqpfduYD/sandbox/7rBssow89K9kCRUu6m8irb-img-3_1771961695000_na1fn_YXJ0aWNsZS13ZWIz.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvRUx6RHNCVVdpZE5jQ0picXBmZHVZRC9zYW5kYm94LzdyQnNzb3c4OUs5a0NSVXU2bThpcmItaW1nLTNfMTc3MTk2MTY5NTAwMF9uYTFmbl9ZWEowYVdOc1pTMTNaV0l6LnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=n6he7f6~-hRjQ2WSKi5rVILc75EFWVAeNmqLziXM1NzmWMI02m9AznS4bd8s5CxFPayBJfIgPyHkRD-VYbS0RjSh9dcbcdOEP5642gWgk~lctshZfKPXmmRrNbK34q6rWaTTigRYUl89HGVemxMM7tYUlO0AA6MzOu8CamfkevfC1W6d1-iBPyG3FHqmHaHDb8sxaacVZkp778ctuUuGsRQuTZaYgJFYqNl-ij1Hp8dhTej190iaIMga9ceSTosi18yFgC5phv4Zb5k~FUk3mcj0Ru~7Kh71mRTRE4Y69vrUMlwe42itdJms8UPoOylKmOScpdQTN6yi6W1BvnJlFg__" alt="Web3 Innovation" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
               </div>
@@ -661,7 +715,7 @@ export default function Home() {
             </a>
 
             {/* Article 4 */}
-            <a href="/insights" className="group">
+            <a href="/insights?article=fintech-compliance" className="group">
               <div className="rounded-lg overflow-hidden mb-4 h-48 bg-card">
                 <img src="https://private-us-east-1.manuscdn.com/sessionFile/ELzDsBUWidNcCJbqpfduYD/sandbox/7rBssow89K9kCRUu6m8irb-img-4_1771961691000_na1fn_YXJ0aWNsZS1jb21wbGlhbmNl.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvRUx6RHNCVVdpZE5jQ0picXBmZHVZRC9zYW5kYm94LzdyQnNzb3c4OUs5a0NSVXU2bThpcmItaW1nLTRfMTc3MTk2MTY5MTAwMF9uYTFmbl9ZWEowYVdOc1pTMWpiMjF3YkdsaGJtTmwucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=umSu86nVQV5or3eBTJteSHcEjQMMxCO5YcLJ-kPwBuMM5OYl47meS2K2crpl1IsKRvpefmD0uQEgQF~9BWOJ27LEIh-015TQjWfEjTcNKY6sWNE4p20S3y21Vp7jYYx0VNWGVD9QuRjCfpvnmqzESOuWU729hSBKMtxI~FjCzMNW2eQ7a9XwjBuJ9izhAmSnPGcq4V6sAShBLFLxuJlSUsxTzYFLc5ithTASy5RtujJ6TpJZtpswyGZ~2nbTSgeucIQ7Fb3jsi-t9HFL4S5MbW~Uq5cx7TRwZgo-JRoenNWWXlVqf7SoSSTwo0z5CGc6dsSxgNspoffH-zCsH8o0ug__" alt="Fintech Compliance" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
               </div>
@@ -693,60 +747,59 @@ export default function Home() {
           <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6">
             <Card className="p-6 bg-card border-border">
               <h3 className="text-xl font-semibold mb-4 text-foreground" style={{ fontFamily: "'Lora', serif" }}>
-                Product Management
+                Product Operations
               </h3>
               <div className="flex flex-wrap gap-2">
-                <Badge variant="secondary">Product Strategy</Badge>
-                <Badge variant="secondary">GTM Strategy</Badge>
-                <Badge variant="secondary">Product Operations</Badge>
-                <Badge variant="secondary">User Research</Badge>
-                <Badge variant="secondary">Roadmap Planning</Badge>
-                <Badge variant="secondary">Competitive Analysis</Badge>
+                <Badge variant="secondary">Process Design & SOPs</Badge>
+                <Badge variant="secondary">Vendor Sourcing & Negotiation</Badge>
+                <Badge variant="secondary">Incident Response Systems</Badge>
+                <Badge variant="secondary">Onboarding Operations</Badge>
+                <Badge variant="secondary">Reconciliation & Audit Process</Badge>
+                <Badge variant="secondary">GTM Strategy & Operations</Badge>
+                <Badge variant="secondary">Product-Led Growth (PLG)</Badge>
+                <Badge variant="secondary">RICE Prioritization</Badge>
+                <Badge variant="secondary">Jira & Confluence</Badge>
               </div>
             </Card>
 
             <Card className="p-6 bg-card border-border">
               <h3 className="text-xl font-semibold mb-4 text-foreground" style={{ fontFamily: "'Lora', serif" }}>
-                Technical Skills
+                AI & Automation
               </h3>
               <div className="flex flex-wrap gap-2">
-                <Badge variant="secondary">MySQL</Badge>
-                <Badge variant="secondary">API Integrations</Badge>
-                <Badge variant="secondary">Prompt Design</Badge>
-                <Badge variant="secondary">Model Evaluation</Badge>
-                <Badge variant="secondary">AI Use Case Prioritization</Badge>
-                <Badge variant="secondary">Telemetry Analysis</Badge>
+                <Badge variant="secondary">Claude</Badge>
+                <Badge variant="secondary">Claude Code</Badge>
+                <Badge variant="secondary">Cursor CLI</Badge>
+                <Badge variant="secondary">AI-Native & Human-in-Loop Workflows</Badge>
+                <Badge variant="secondary">Prompt & Context Engineering</Badge>
+                <Badge variant="secondary">LLM Evaluation</Badge>
+                <Badge variant="secondary">Requirement Engineering</Badge>
               </div>
             </Card>
 
             <Card className="p-6 bg-card border-border">
               <h3 className="text-xl font-semibold mb-4 text-foreground" style={{ fontFamily: "'Lora', serif" }}>
-                Tools & Platforms
+                Data & Reporting
               </h3>
               <div className="flex flex-wrap gap-2">
+                <Badge variant="secondary">SQL</Badge>
                 <Badge variant="secondary">Tableau</Badge>
-                <Badge variant="secondary">Figma</Badge>
                 <Badge variant="secondary">MixPanel</Badge>
-                <Badge variant="secondary">Google Analytics</Badge>
-                <Badge variant="secondary">HubSpot CRM</Badge>
-                <Badge variant="secondary">Notion</Badge>
-                <Badge variant="secondary">Asana</Badge>
-                <Badge variant="secondary">Postman</Badge>
+                <Badge variant="secondary">Unit Economics (LTV/CAC)</Badge>
+                <Badge variant="secondary">KPI/OKR Tracking</Badge>
               </div>
             </Card>
 
             <Card className="p-6 bg-card border-border">
               <h3 className="text-xl font-semibold mb-4 text-foreground" style={{ fontFamily: "'Lora', serif" }}>
-                Domain Expertise
+                Fintech & Compliance
               </h3>
               <div className="flex flex-wrap gap-2">
-                <Badge variant="secondary">EdTech</Badge>
-                <Badge variant="secondary">Fintech</Badge>
-                <Badge variant="secondary">Cryptocurrency</Badge>
-                <Badge variant="secondary">KYC/AML</Badge>
-                <Badge variant="secondary">IoT</Badge>
-                <Badge variant="secondary">B2B SaaS</Badge>
-                <Badge variant="secondary">Compliance</Badge>
+                <Badge variant="secondary">API Lifecycle Management</Badge>
+                <Badge variant="secondary">KYC/AML Operations</Badge>
+                <Badge variant="secondary">Custody Integration</Badge>
+                <Badge variant="secondary">Payment Gateway Operations</Badge>
+                <Badge variant="secondary">Ledgering & Reconciliation</Badge>
               </div>
             </Card>
           </div>
@@ -772,8 +825,8 @@ export default function Home() {
               Open to new opportunities and collaborations
             </p>
             
-            <div className="grid md:grid-cols-2 gap-6 mb-12">
-              <a 
+            <div className="grid md:grid-cols-2 gap-6 mb-12 max-w-2xl mx-auto">
+              <a
                 href="mailto:anant.gyan@outlook.com"
                 className="flex items-center gap-4 p-6 bg-background rounded-lg border border-border hover:border-primary transition-colors group"
               >
@@ -800,19 +853,6 @@ export default function Home() {
                   <div className="text-sm text-muted-foreground">linkedin.com/in/anantgyan</div>
                 </div>
                 <ExternalLink className="w-4 h-4 text-muted-foreground ml-auto" />
-              </a>
-
-              <a 
-                href="tel:+16082178426"
-                className="flex items-center gap-4 p-6 bg-background rounded-lg border border-border hover:border-primary transition-colors group"
-              >
-                <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
-                  <Phone className="w-6 h-6 text-primary" />
-                </div>
-                <div className="text-left">
-                  <div className="font-semibold text-foreground">Phone</div>
-                  <div className="text-sm text-muted-foreground">+1 (608) 217-8426</div>
-                </div>
               </a>
             </div>
 

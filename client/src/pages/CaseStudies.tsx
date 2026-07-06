@@ -1,12 +1,21 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, ArrowRight } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 
 export default function CaseStudies() {
-  const [expandedCase, setExpandedCase] = useState<string | null>(null);
+  const [expandedCase, setExpandedCase] = useState<string | null>(
+    () => new URLSearchParams(window.location.search).get('study')
+  );
+
+  useEffect(() => {
+    if (expandedCase) {
+      document.getElementById(`case-${expandedCase}`)?.scrollIntoView({ block: 'start' });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className="min-h-screen bg-background">
@@ -39,7 +48,7 @@ export default function CaseStudies() {
         <div className="container max-w-5xl">
           <div className="space-y-8">
             {/* ELEVATE Wisconsin */}
-            <Collapsible open={expandedCase === 'elevate'} onOpenChange={(open) => setExpandedCase(open ? 'elevate' : null)}>
+            <Collapsible id="case-elevate" open={expandedCase === 'elevate'} onOpenChange={(open) => setExpandedCase(open ? 'elevate' : null)}>
               <Card className="overflow-hidden border-border hover:border-primary transition-colors">
                 <div className="grid md:grid-cols-3 gap-6 p-6">
                   <div className="md:col-span-1">
@@ -119,18 +128,21 @@ export default function CaseStudies() {
                             <div className="text-sm text-muted-foreground">Funding Secured</div>
                           </div>
                           <div className="bg-primary/10 p-4 rounded-lg">
-                            <div className="text-2xl font-bold text-primary">25</div>
-                            <div className="text-sm text-muted-foreground">Teachers Trained</div>
+                            <div className="text-2xl font-bold text-primary">8,000+</div>
+                            <div className="text-sm text-muted-foreground">Projected Reach</div>
                           </div>
                           <div className="bg-primary/10 p-4 rounded-lg">
-                            <div className="text-2xl font-bold text-primary">10</div>
+                            <div className="text-2xl font-bold text-primary">20+</div>
                             <div className="text-sm text-muted-foreground">School Districts</div>
                           </div>
-
+                          <div className="bg-primary/10 p-4 rounded-lg">
+                            <div className="text-2xl font-bold text-primary">1,500+</div>
+                            <div className="text-sm text-muted-foreground">Departments in Rollout</div>
+                          </div>
                         </div>
                         <ul className="space-y-2">
-                          <li className="flex gap-2"><span className="text-primary">•</span><span>Earned Wisconsin Governor's Award for Financial Literacy—recognition of impact in underserved communities</span></li>
-
+                          <li className="flex gap-2"><span className="text-primary">•</span><span>Built AI-powered workflows that cut operational overhead 60% by automating grant research, application drafting, and budget generation</span></li>
+                          <li className="flex gap-2"><span className="text-primary">•</span><span>Spearheading expansion of the Financial Wellness Champion Training to state, county, local government, colleges, and university systems across Wisconsin</span></li>
                           <li className="flex gap-2"><span className="text-primary">•</span><span>Established sustainable teacher-led adoption model that scales without proportional marketing costs</span></li>
                         </ul>
                       </div>
@@ -146,7 +158,7 @@ export default function CaseStudies() {
             </Collapsible>
 
             {/* Google Gemini */}
-            <Collapsible open={expandedCase === 'google'} onOpenChange={(open) => setExpandedCase(open ? 'google' : null)}>
+            <Collapsible id="case-google" open={expandedCase === 'google'} onOpenChange={(open) => setExpandedCase(open ? 'google' : null)}>
               <Card className="overflow-hidden border-border hover:border-primary transition-colors">
                 <div className="grid md:grid-cols-3 gap-6 p-6">
                   <div className="md:col-span-1">
@@ -258,7 +270,7 @@ export default function CaseStudies() {
             </Collapsible>
 
             {/* CryptoSmartlife */}
-            <Collapsible open={expandedCase === 'crypto'} onOpenChange={(open) => setExpandedCase(open ? 'crypto' : null)}>
+            <Collapsible id="case-crypto" open={expandedCase === 'crypto'} onOpenChange={(open) => setExpandedCase(open ? 'crypto' : null)}>
               <Card className="overflow-hidden border-border hover:border-primary transition-colors">
                 <div className="grid md:grid-cols-3 gap-6 p-6">
                   <div className="md:col-span-1">
@@ -352,9 +364,11 @@ export default function CaseStudies() {
                           </div>
                         </div>
                         <ul className="space-y-2">
+                          <li className="flex gap-2"><span className="text-primary">•</span><span>Reduced KYC/AML verification time from 48 hours to under 30 seconds through a negotiated vendor partnership</span></li>
                           <li className="flex gap-2"><span className="text-primary">•</span><span>Reduced churn by 45% through simultaneous optimization of UX, operations, and compliance</span></li>
-                          <li className="flex gap-2"><span className="text-primary">•</span><span>Improved issue resolution to under 5 minutes with 24/7 monitoring and automated alerting</span></li>
+                          <li className="flex gap-2"><span className="text-primary">•</span><span>Improved issue resolution to under 5 minutes with Slack-integrated monitoring and automated alerting</span></li>
                           <li className="flex gap-2"><span className="text-primary">•</span><span>Increased onboarding efficiency by 50% through KYC/AML workflow redesign</span></li>
+                          <li className="flex gap-2"><span className="text-primary">•</span><span>Identified a 0.2% fee discrepancy during quarterly reconciliation and implemented automated weekly reconciliation to prevent recurrence</span></li>
                           <li className="flex gap-2"><span className="text-primary">•</span><span>Maintained 99.2% accuracy in identity verification with 95% auto-approval rate</span></li>
                           <li className="flex gap-2"><span className="text-primary">•</span><span>Ranked #3 Global best product on Product Hunt with 4.7 rating</span></li>
                         </ul>
