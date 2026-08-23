@@ -10,7 +10,8 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Collapsible, CollapsibleTrigger, CollapsibleContent } from "@/components/ui/collapsible";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { Mail, Linkedin, ExternalLink, Award, TrendingUp, Users, Zap, Shield, ChevronDown, ArrowRight } from "lucide-react";
+import ImagePlaceholder from "@/components/ImagePlaceholder";
+import { Mail, Linkedin, ExternalLink, Award, TrendingUp, Users, Zap, Shield, ChevronDown, ArrowRight, Rocket, Settings2, BarChart3, GraduationCap, Database, Wallet, Activity, Link2 } from "lucide-react";
 import { useState } from "react";
 
 export default function Home() {
@@ -37,18 +38,14 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        <div 
-          className="absolute inset-0 opacity-40"
-          style={{
-            backgroundImage: "url('https://files.manuscdn.com/user_upload_by_module/session_file/310519663314450255/MDuPlkcmXHJWVgGQ.png')",
-            backgroundSize: "cover",
-            backgroundPosition: "center"
-          }}
-        />
         <div className="container relative py-24 lg:py-32">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="max-w-2xl">
-            <div className="mb-6"></div>
+            <div className="mb-6">
+              <Badge variant="secondary" className="text-xs font-medium">
+                ⚡ Built using Claude Code within 30 minutes
+              </Badge>
+            </div>
             <h1 className="text-5xl lg:text-7xl mb-6 text-foreground leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
               Product Operations Manager
             </h1>
@@ -82,9 +79,9 @@ export default function Home() {
             </div>
             </div>
             <div className="lg:block">
-              <img 
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663314450255/cfoNbvHXIBnddZSD.PNG" 
-                alt="Anant Gyan - Product Manager" 
+              <img
+                src="/images/og-image-v2.jpg"
+                alt="Anant Gyan - Product Operations Manager"
                 className="w-full max-w-sm lg:max-w-none mx-auto lg:mx-0 rounded-lg shadow-2xl"
               />
             </div>
@@ -165,11 +162,7 @@ export default function Home() {
             {/* GTM Strategy */}
             <Card className="p-8 bg-card border-border hover:border-primary transition-colors">
               <div className="mb-6">
-                <img 
-                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663314450255/bETHshKwMXfMuTQP.png" 
-                  alt="GTM Strategy" 
-                  className="w-full h-48 object-cover rounded-lg mb-4"
-                />
+                <ImagePlaceholder icon={Rocket} className="w-full h-48 rounded-lg mb-4" />
               </div>
               <h3 className="text-2xl font-semibold mb-4 text-foreground" style={{ fontFamily: "'Lora', serif" }}>
                 GTM Strategy & Operations
@@ -196,11 +189,7 @@ export default function Home() {
             {/* Product Operations */}
             <Card className="p-8 bg-card border-border hover:border-primary transition-colors">
               <div className="mb-6">
-                <img 
-                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663314450255/DJUsSKmqLNFKzlZZ.png" 
-                  alt="Product Operations" 
-                  className="w-full h-48 object-cover rounded-lg mb-4"
-                />
+                <ImagePlaceholder icon={Settings2} className="w-full h-48 rounded-lg mb-4" />
               </div>
               <h3 className="text-2xl font-semibold mb-4 text-foreground" style={{ fontFamily: "'Lora', serif" }}>
                 Product Operations
@@ -258,11 +247,7 @@ export default function Home() {
             {/* Data-Driven Leadership */}
             <Card className="p-8 bg-card border-border hover:border-primary transition-colors">
               <div className="mb-6">
-                <img 
-                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663314450255/FrqqoPKLVUaXLbUC.png" 
-                  alt="Data-Driven Leadership" 
-                  className="w-full h-48 object-cover rounded-lg mb-4"
-                />
+                <ImagePlaceholder icon={BarChart3} className="w-full h-48 rounded-lg mb-4" />
               </div>
               <h3 className="text-2xl font-semibold mb-4 text-foreground" style={{ fontFamily: "'Lora', serif" }}>
                 Data-Driven Leadership
@@ -583,11 +568,7 @@ export default function Home() {
             <a href="/case-studies?study=elevate" className="group">
               <Card className="overflow-hidden bg-background border-border hover:border-primary transition-all hover:shadow-lg">
                 <div className="h-48 overflow-hidden bg-muted">
-                  <img 
-                    src="https://private-us-east-1.manuscdn.com/sessionFile/ELzDsBUWidNcCJbqpfduYD/sandbox/GgKTm1qyairN9T4pBukRHH-img-1_1771974683000_na1fn_ZWxldmF0ZS13aXNjb25zaW4tZmluYW5jaWFsLWxpdGVyYWN5.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvRUx6RHNCVVdpZE5jQ0picXBmZHVZRC9zYW5kYm94L0dnS1RtMXF5YWlyTjlUNHBCdWtSSEgtaW1nLTFfMTc3MTk3NDY4MzAwMF9uYTFmbl9aV3hsZG1GMFpTMTNhWE5qYjI1emFXNHRabWx1WVc1amFXRnNMV3hwZEdWeVlXTjUucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=eF0ECkMPdQMgGNzAuY2YbloMbtBz3K-JS-D326T9y-FAfoTBZBfnbs6u9OtmYu~FYAGWKuCdozzAww~InUjr3EpOzwrAc0hBCgQqYxXkkvjEsJ6t744KCG7m04NAxVGuqgKHEHnXbgd7UDTQ1tcCQOHMS1hEInrmuVLxiJW4mnyU7u~kNFGOFMvLF-EaGW88LKrAoiLktrt1zPjkrOu5PUUU7fpapyK~UDTx0wDainMxRH27giU0Nl~LRjt1yf46PN4jbqMjdQArbalrp0xZixFqvURh8ZvTKdhroEg-HTyOywlZDEUce1SSKB1ahNbPFa8LKXt0Rz~tzkqbiojreg__"
-                    alt="ELEVATE Wisconsin"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
+                  <ImagePlaceholder icon={GraduationCap} className="w-full h-full" />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2 text-foreground group-hover:text-primary transition-colors" style={{ fontFamily: "'Lora', serif" }}>
@@ -607,11 +588,7 @@ export default function Home() {
             <a href="/case-studies?study=google" className="group">
               <Card className="overflow-hidden bg-background border-border hover:border-primary transition-all hover:shadow-lg">
                 <div className="h-48 overflow-hidden bg-muted">
-                  <img 
-                    src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663314450255/axLxiyGLsqysyBuw.png"
-                    alt="Google Query Optimization"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
+                  <ImagePlaceholder icon={Database} className="w-full h-full" />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2 text-foreground group-hover:text-primary transition-colors" style={{ fontFamily: "'Lora', serif" }}>
@@ -631,11 +608,7 @@ export default function Home() {
             <a href="/case-studies?study=crypto" className="group">
               <Card className="overflow-hidden bg-background border-border hover:border-primary transition-all hover:shadow-lg">
                 <div className="h-48 overflow-hidden bg-muted">
-                  <img 
-                    src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663314450255/DfPoTklYlRvyXrHM.png"
-                    alt="CryptoSmartlife"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
+                  <ImagePlaceholder icon={Wallet} className="w-full h-full" />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2 text-foreground group-hover:text-primary transition-colors" style={{ fontFamily: "'Lora', serif" }}>
@@ -672,7 +645,7 @@ export default function Home() {
             {/* Article 1 */}
             <a href="/insights?article=gtm-strategy" className="group">
               <div className="rounded-lg overflow-hidden mb-4 h-48 bg-card">
-                <img src="https://private-us-east-1.manuscdn.com/sessionFile/ELzDsBUWidNcCJbqpfduYD/sandbox/7rBssow89K9kCRUu6m8irb-img-1_1771961696000_na1fn_YXJ0aWNsZS1ndG0tc3RyYXRlZ3k.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvRUx6RHNCVVdpZE5jQ0picXBmZHVZRC9zYW5kYm94LzdyQnNzb3c4OUs5a0NSVXU2bThpcmItaW1nLTFfMTc3MTk2MTY5NjAwMF9uYTFmbl9ZWEowYVdOc1pTMW5kRzB0YzNSeVlYUmxaM2sucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=VLgpGzLmJ7OGqx4ZzDz89aMraC9uky9tT7e-gYZ~QSRHC1I~7jUrWagPiuF5Yd2mXUNLIrHjHjpF~DneMj6~a0Kin8j3EL72Y7W1ib1KcX~PaSdjH9thXVPl5WuodYbViXxl2cQzU1NPQdFwJA5ihkll21i-FhQhUM5uvGU47JUX-JC3zFR4GzjiXWMrZ8v6h0rHNgf~741DGlIgLLvdiJUr4~8K244sx9CO5XcIJURvtU9T-2hBNihpYI3fsje7Xne0eI3D1AqABiKbxHk606dER890XNE-CAKh77v1~Am-x3IO9TPdaif9dc44jqSIv9qoWxfqoYsVwmPJS~hYQQ__" alt="EdTech GTM Strategy" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+                <ImagePlaceholder icon={Rocket} className="w-full h-full" />
               </div>
               <Badge variant="secondary" className="mb-3">GTM Strategy</Badge>
               <h3 className="text-xl font-semibold mb-2 text-foreground group-hover:text-primary transition-colors" style={{ fontFamily: "'Playfair Display', serif" }}>
@@ -687,7 +660,7 @@ export default function Home() {
             {/* Article 2 */}
             <a href="/insights?article=fintech-operations" className="group">
               <div className="rounded-lg overflow-hidden mb-4 h-48 bg-card">
-                <img src="https://private-us-east-1.manuscdn.com/sessionFile/ELzDsBUWidNcCJbqpfduYD/sandbox/7rBssow89K9kCRUu6m8irb-img-2_1771961696000_na1fn_YXJ0aWNsZS1maW50ZWNoLW9wcw.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvRUx6RHNCVVdpZE5jQ0picXBmZHVZRC9zYW5kYm94LzdyQnNzb3c4OUs5a0NSVXU2bThpcmItaW1nLTJfMTc3MTk2MTY5NjAwMF9uYTFmbl9ZWEowYVdOc1pTMW1hVzUwWldOb0xXOXdjdy5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=Bi64f5apdS2BVWeGKAC9oyvii4--4Dd2xyNDqsmIK2ygriSCaii0paduESDz4zfe-nUEQFpl19tSmz5ibhRTFOk7AfLWfqwCo1m9KW4jPv3t5R96d~t7WBxkREVbmNoYuLPsmccbT-6rFpMrqGu0HQPIciO-ZSTu~GBFqMdtIgXxXxMz9SFM6-SE9u4-yOn9qaGpzGEcwbYhl50Km8ZsiyEUobJKYIMmdKHhFYjioEId6Ff4A956xdY8mbK3zsyW1SLcVfFbZEypi0gpf3tPT4BBtYsFw6uA1JlodaM193FhRl-RmNvgi15cjCSDNJSHlQ8DSMdV9Buybg33k7KB1g__" alt="Fintech Operations" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+                <ImagePlaceholder icon={Activity} className="w-full h-full" />
               </div>
               <Badge variant="secondary" className="mb-3">Fintech Operations</Badge>
               <h3 className="text-xl font-semibold mb-2 text-foreground group-hover:text-primary transition-colors" style={{ fontFamily: "'Playfair Display', serif" }}>
@@ -702,7 +675,7 @@ export default function Home() {
             {/* Article 3 */}
             <a href="/insights?article=web3-innovation" className="group">
               <div className="rounded-lg overflow-hidden mb-4 h-48 bg-card">
-                <img src="https://private-us-east-1.manuscdn.com/sessionFile/ELzDsBUWidNcCJbqpfduYD/sandbox/7rBssow89K9kCRUu6m8irb-img-3_1771961695000_na1fn_YXJ0aWNsZS13ZWIz.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvRUx6RHNCVVdpZE5jQ0picXBmZHVZRC9zYW5kYm94LzdyQnNzb3c4OUs5a0NSVXU2bThpcmItaW1nLTNfMTc3MTk2MTY5NTAwMF9uYTFmbl9ZWEowYVdOc1pTMTNaV0l6LnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=n6he7f6~-hRjQ2WSKi5rVILc75EFWVAeNmqLziXM1NzmWMI02m9AznS4bd8s5CxFPayBJfIgPyHkRD-VYbS0RjSh9dcbcdOEP5642gWgk~lctshZfKPXmmRrNbK34q6rWaTTigRYUl89HGVemxMM7tYUlO0AA6MzOu8CamfkevfC1W6d1-iBPyG3FHqmHaHDb8sxaacVZkp778ctuUuGsRQuTZaYgJFYqNl-ij1Hp8dhTej190iaIMga9ceSTosi18yFgC5phv4Zb5k~FUk3mcj0Ru~7Kh71mRTRE4Y69vrUMlwe42itdJms8UPoOylKmOScpdQTN6yi6W1BvnJlFg__" alt="Web3 Innovation" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+                <ImagePlaceholder icon={Link2} className="w-full h-full" />
               </div>
               <Badge variant="secondary" className="mb-3">Web3 & Blockchain</Badge>
               <h3 className="text-xl font-semibold mb-2 text-foreground group-hover:text-primary transition-colors" style={{ fontFamily: "'Playfair Display', serif" }}>
@@ -717,7 +690,7 @@ export default function Home() {
             {/* Article 4 */}
             <a href="/insights?article=fintech-compliance" className="group">
               <div className="rounded-lg overflow-hidden mb-4 h-48 bg-card">
-                <img src="https://private-us-east-1.manuscdn.com/sessionFile/ELzDsBUWidNcCJbqpfduYD/sandbox/7rBssow89K9kCRUu6m8irb-img-4_1771961691000_na1fn_YXJ0aWNsZS1jb21wbGlhbmNl.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvRUx6RHNCVVdpZE5jQ0picXBmZHVZRC9zYW5kYm94LzdyQnNzb3c4OUs5a0NSVXU2bThpcmItaW1nLTRfMTc3MTk2MTY5MTAwMF9uYTFmbl9ZWEowYVdOc1pTMWpiMjF3YkdsaGJtTmwucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=umSu86nVQV5or3eBTJteSHcEjQMMxCO5YcLJ-kPwBuMM5OYl47meS2K2crpl1IsKRvpefmD0uQEgQF~9BWOJ27LEIh-015TQjWfEjTcNKY6sWNE4p20S3y21Vp7jYYx0VNWGVD9QuRjCfpvnmqzESOuWU729hSBKMtxI~FjCzMNW2eQ7a9XwjBuJ9izhAmSnPGcq4V6sAShBLFLxuJlSUsxTzYFLc5ithTASy5RtujJ6TpJZtpswyGZ~2nbTSgeucIQ7Fb3jsi-t9HFL4S5MbW~Uq5cx7TRwZgo-JRoenNWWXlVqf7SoSSTwo0z5CGc6dsSxgNspoffH-zCsH8o0ug__" alt="Fintech Compliance" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+                <ImagePlaceholder icon={Shield} className="w-full h-full" />
               </div>
               <Badge variant="secondary" className="mb-3">Compliance & Regulation</Badge>
               <h3 className="text-xl font-semibold mb-2 text-foreground group-hover:text-primary transition-colors" style={{ fontFamily: "'Playfair Display', serif" }}>
@@ -808,14 +781,6 @@ export default function Home() {
 
       {/* Contact Section */}
       <section id="contact" className="relative py-20 bg-card overflow-hidden">
-        <div 
-          className="absolute inset-0 opacity-30"
-          style={{
-            backgroundImage: "url('https://files.manuscdn.com/user_upload_by_module/session_file/310519663314450255/VgUSCBBCTYusZxNJ.png')",
-            backgroundSize: "cover",
-            backgroundPosition: "center"
-          }}
-        />
         <div className="container relative">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-4xl lg:text-5xl mb-6 text-foreground" style={{ fontFamily: "'Playfair Display', serif" }}>

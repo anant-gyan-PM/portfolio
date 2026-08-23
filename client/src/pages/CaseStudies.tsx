@@ -1,9 +1,10 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ChevronDown, ArrowRight } from "lucide-react";
+import { ChevronDown, ArrowRight, GraduationCap, Database, Wallet, Shield } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import ImagePlaceholder from "@/components/ImagePlaceholder";
 
 export default function CaseStudies() {
   const [expandedCase, setExpandedCase] = useState<string | null>(
@@ -52,11 +53,7 @@ export default function CaseStudies() {
               <Card className="overflow-hidden border-border hover:border-primary transition-colors">
                 <div className="grid md:grid-cols-3 gap-6 p-6">
                   <div className="md:col-span-1">
-                    <img
-                      src="https://private-us-east-1.manuscdn.com/sessionFile/ELzDsBUWidNcCJbqpfduYD/sandbox/GgKTm1qyairN9T4pBukRHH-img-1_1771974683000_na1fn_ZWxldmF0ZS13aXNjb25zaW4tZmluYW5jaWFsLWxpdGVyYWN5.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvRUx6RHNCVVdpZE5jQ0picXBmZHVZRC9zYW5kYm94L0dnS1RtMXF5YWlyTjlUNHBCdWtSSEgtaW1nLTFfMTc3MTk3NDY4MzAwMF9uYTFmbl9aV3hsZG1GMFpTMTNhWE5qYjI1emFXNHRabWx1WVc1amFXRnNMV3hwZEdWeVlXTjUucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=eF0ECkMPdQMgGNzAuY2YbloMbtBz3K-JS-D326T9y-FAfoTBZBfnbs6u9OtmYu~FYAGWKuCdozzAww~InUjr3EpOzwrAc0hBCgQqYxXkkvjEsJ6t744KCG7m04NAxVGuqgKHEHnXbgd7UDTQ1tcCQOHMS1hEInrmuVLxiJW4mnyU7u~kNFGOFMvLF-EaGW88LKrAoiLktrt1zPjkrOu5PUUU7fpapyK~UDTx0wDainMxRH27giU0Nl~LRjt1yf46PN4jbqMjdQArbalrp0xZixFqvURh8ZvTKdhroEg-HTyOywlZDEUce1SSKB1ahNbPFa8LKXt0Rz~tzkqbiojreg__"
-                      alt="ELEVATE Wisconsin"
-                      className="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-lg transition-shadow"
-                    />
+                    <ImagePlaceholder icon={GraduationCap} className="w-full h-48 rounded-lg shadow-md hover:shadow-lg transition-shadow" />
                   </div>
 
                   <div className="md:col-span-2 flex flex-col justify-between">
@@ -92,14 +89,6 @@ export default function CaseStudies() {
                 <CollapsibleContent>
                   <div className="border-t border-border p-6 bg-card/50">
                     <div className="space-y-8 text-muted-foreground max-w-none">
-                      <div>
-                        <img 
-                          src="https://private-us-east-1.manuscdn.com/sessionFile/ELzDsBUWidNcCJbqpfduYD/sandbox/GgKTm1qyairN9T4pBukRHH-img-1_1771974683000_na1fn_ZWxldmF0ZS13aXNjb25zaW4tZmluYW5jaWFsLWxpdGVyYWN5.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvRUx6RHNCVVdpZE5jQ0picXBmZHVZRC9zYW5kYm94L0dnS1RtMXF5YWlyTjlUNHBCdWtSSEgtaW1nLTFfMTc3MTk3NDY4MzAwMF9uYTFmbl9aV3hsZG1GMFpTMTNhWE5qYjI1emFXNHRabWx1WVc1amFXRnNMV3hwZEdWeVlXTjUucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=eF0ECkMPdQMgGNzAuY2YbloMbtBz3K-JS-D326T9y-FAfoTBZBfnbs6u9OtmYu~FYAGWKuCdozzAww~InUjr3EpOzwrAc0hBCgQqYxXkkvjEsJ6t744KCG7m04NAxVGuqgKHEHnXbgd7UDTQ1tcCQOHMS1hEInrmuVLxiJW4mnyU7u~kNFGOFMvLF-EaGW88LKrAoiLktrt1zPjkrOu5PUUU7fpapyK~UDTx0wDainMxRH27giU0Nl~LRjt1yf46PN4jbqMjdQArbalrp0xZixFqvURh8ZvTKdhroEg-HTyOywlZDEUce1SSKB1ahNbPFa8LKXt0Rz~tzkqbiojreg__"
-                          alt="ELEVATE Wisconsin"
-                          className="w-full rounded-lg shadow-lg mb-8"
-                        />
-                      </div>
-
                       <div>
                         <h4 className="font-semibold text-foreground mb-3 text-lg">The Challenge</h4>
                         <p className="leading-relaxed">Members of tribal nations receive substantial distributions ($100,000+) upon turning 18. Without proper financial education, many waste these resources on impulsive purchases or fall victim to predatory lending schemes. Rural and tribal communities lack accessible financial literacy programs integrated into school curricula, creating a critical gap in financial preparedness for young adults.</p>
@@ -162,11 +151,7 @@ export default function CaseStudies() {
               <Card className="overflow-hidden border-border hover:border-primary transition-colors">
                 <div className="grid md:grid-cols-3 gap-6 p-6">
                   <div className="md:col-span-1">
-                    <img
-                      src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663314450255/HJRDtHqULtrmYSPg.png"
-                      alt="Google Gemini"
-                      className="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-lg transition-shadow"
-                    />
+                    <ImagePlaceholder icon={Database} className="w-full h-48 rounded-lg shadow-md hover:shadow-lg transition-shadow" />
                   </div>
 
                   <div className="md:col-span-2 flex flex-col justify-between">
@@ -214,11 +199,7 @@ export default function CaseStudies() {
 
                       <div>
                         <h4 className="font-semibold text-foreground mb-3 text-lg">System Architecture</h4>
-                        <img 
-                          src="https://private-us-east-1.manuscdn.com/sessionFile/ELzDsBUWidNcCJbqpfduYD/sandbox/zX3qcHxXvFDiP8ympTEYNN-img-1_1771976044000_na1fn_Z29vZ2xlLWdlbWluaS1hcmNoaXRlY3R1cmU.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvRUx6RHNCVVdpZE5jQ0picXBmZHVZRC9zYW5kYm94L3pYM3FjSHhYdkZEaVA4eW1wVEVZTk4taW1nLTFfMTc3MTk3NjA0NDAwMF9uYTFmbl9aMjl2WjJ4bExXZGxiV2x1YVMxaGNtTm9hWFJsWTNSMWNtVS5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=C8Um9MGEz1aM2Ka5~Bqzw00ExeyZ~MKZfuu2V8mI25Ws7GK0o1Xj~Dn4dWp8DEteQxHpMy~c2i08lP33yhdpuA~jXemxirGUSf9fxjPjsmHL-sznpxjVN93IqVsqh81c9rO8POHLoMdKLQ7kuDW-48mtPWk0QjfndCAPSVpftV0yqcxk6E4aK5oM0wTegpvH3Y-zEjEv-72SjoxrTc80dkuSZVQk3-DG6QV6lyseebz0yZcp52y67GaYK7oJet47kqJo70hR-sZd0RBesAc1J6tXIKxxJ~v1a3F~yWGVI1Rq8dTu3~ma4XM5t~o6tdzee814C0f1~cRIaYCIPW4-lw__"
-                          alt="Google Gemini Architecture"
-                          className="w-full rounded-lg shadow-lg mb-6"
-                        />
+                        <ImagePlaceholder icon={Database} className="w-full h-64 rounded-lg shadow-lg mb-6" iconClassName="w-20 h-20" />
                       </div>
 
                       <div>
@@ -274,11 +255,7 @@ export default function CaseStudies() {
               <Card className="overflow-hidden border-border hover:border-primary transition-colors">
                 <div className="grid md:grid-cols-3 gap-6 p-6">
                   <div className="md:col-span-1">
-                    <img
-                      src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663314450255/DfPoTklYlRvyXrHM.png"
-                      alt="CryptoSmartlife"
-                      className="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-lg transition-shadow"
-                    />
+                    <ImagePlaceholder icon={Wallet} className="w-full h-48 rounded-lg shadow-md hover:shadow-lg transition-shadow" />
                   </div>
 
                   <div className="md:col-span-2 flex flex-col justify-between">
@@ -326,11 +303,7 @@ export default function CaseStudies() {
 
                       <div>
                         <h4 className="font-semibold text-foreground mb-3 text-lg">Security Architecture</h4>
-                        <img 
-                          src="https://private-us-east-1.manuscdn.com/sessionFile/ELzDsBUWidNcCJbqpfduYD/sandbox/TNmNFCMUUMzfwVGgiqZytH-img-1_1771976629000_na1fn_Y3J5cHRvc21hcnRsaWZlLXNlY3VyaXR5LWFyY2hpdGVjdHVyZS1tb2Rlcm4.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvRUx6RHNCVVdpZE5jQ0picXBmZHVZRC9zYW5kYm94L1RObU5GQ01VVU16ZndWR2dpcVp5dEgtaW1nLTFfMTc3MTk3NjYyOTAwMF9uYTFmbl9ZM0o1Y0hSdmMyMWhjblJzYVdabExYTmxZM1Z5YVhSNUxXRnlZMmhwZEdWamRIVnlaUzF0YjJSbGNtNC5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=fle7Nl1SJkE0Sqljxwt7FGssYX9WS1hB3WviiSGCgRAu6r~V-dHwhOXDEtC3nvSGkwDp2iFNHlxe9AyTSfHk6GEq4-kKzQewE~-2gMxPbCNkL3AtUeq7zAiNYRiexZgNxFyqOGVjwKm2GaCPiF90IgxuZrOVMa38PdYsv4xcQb7O7P1RtaXVg0cTNyHM1vJ2guUvA3w9qJvKFVnu3PLrgUJlWzrFt1G89Uv~JTtFRi67JUdSAmq-FE7TaQirpZ4OxsEhnYJULogY6veQgZvwYswcNdp8d5wHSban8jK2J0-9aXG2aH3Eq85LExLdWHl~~PE~pFghXQyCFtingepS9A__"
-                          alt="CryptoSmartlife Security Architecture"
-                          className="w-full rounded-lg shadow-lg mb-6"
-                        />
+                        <ImagePlaceholder icon={Shield} className="w-full h-64 rounded-lg shadow-lg mb-6" iconClassName="w-20 h-20" />
                       </div>
 
                       <div>
