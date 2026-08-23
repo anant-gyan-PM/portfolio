@@ -1,10 +1,9 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ChevronDown, ArrowRight, GraduationCap, Database, Wallet, Shield } from "lucide-react";
+import { ChevronDown, ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
 
 export default function CaseStudies() {
   const [expandedCase, setExpandedCase] = useState<string | null>(
@@ -53,7 +52,7 @@ export default function CaseStudies() {
               <Card className="overflow-hidden border-border hover:border-primary transition-colors">
                 <div className="grid md:grid-cols-3 gap-6 p-6">
                   <div className="md:col-span-1">
-                    <ImagePlaceholder icon={GraduationCap} className="w-full h-48 rounded-lg shadow-md hover:shadow-lg transition-shadow" />
+                    <img src="/images/elevate-wisconsin.jpg" alt="ELEVATE Wisconsin" className="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-lg transition-shadow" />
                   </div>
 
                   <div className="md:col-span-2 flex flex-col justify-between">
@@ -151,7 +150,7 @@ export default function CaseStudies() {
               <Card className="overflow-hidden border-border hover:border-primary transition-colors">
                 <div className="grid md:grid-cols-3 gap-6 p-6">
                   <div className="md:col-span-1">
-                    <ImagePlaceholder icon={Database} className="w-full h-48 rounded-lg shadow-md hover:shadow-lg transition-shadow" />
+                    <img src="/images/ai-query-optimization.jpg" alt="Google Gemini" className="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-lg transition-shadow" />
                   </div>
 
                   <div className="md:col-span-2 flex flex-col justify-between">
@@ -199,7 +198,7 @@ export default function CaseStudies() {
 
                       <div>
                         <h4 className="font-semibold text-foreground mb-3 text-lg">System Architecture</h4>
-                        <ImagePlaceholder icon={Database} className="w-full h-64 rounded-lg shadow-lg mb-6" iconClassName="w-20 h-20" />
+                        <img src="/images/gemini-architecture.jpg" alt="Google Gemini Architecture" className="w-full rounded-lg shadow-lg mb-6" />
                       </div>
 
                       <div>
@@ -255,7 +254,7 @@ export default function CaseStudies() {
               <Card className="overflow-hidden border-border hover:border-primary transition-colors">
                 <div className="grid md:grid-cols-3 gap-6 p-6">
                   <div className="md:col-span-1">
-                    <ImagePlaceholder icon={Wallet} className="w-full h-48 rounded-lg shadow-md hover:shadow-lg transition-shadow" />
+                    <img src="/images/cryptosmartlife.jpg" alt="CryptoSmartlife" className="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-lg transition-shadow" />
                   </div>
 
                   <div className="md:col-span-2 flex flex-col justify-between">
@@ -303,7 +302,7 @@ export default function CaseStudies() {
 
                       <div>
                         <h4 className="font-semibold text-foreground mb-3 text-lg">Security Architecture</h4>
-                        <ImagePlaceholder icon={Shield} className="w-full h-64 rounded-lg shadow-lg mb-6" iconClassName="w-20 h-20" />
+                        <img src="/images/cryptosmartlife-security.jpg" alt="CryptoSmartlife Security Architecture" className="w-full rounded-lg shadow-lg mb-6" />
                       </div>
 
                       <div>

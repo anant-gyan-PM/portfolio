@@ -1,9 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { ArrowLeft, Clock, Calendar, Rocket, Activity, Link2, ShieldCheck } from 'lucide-react';
+import { ArrowLeft, Clock, Calendar } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
-import ImagePlaceholder from '@/components/ImagePlaceholder';
 
 export default function Insights() {
   const [selectedArticle, setSelectedArticle] = useState<string | null>(
@@ -18,7 +17,7 @@ export default function Insights() {
       date: 'June 2026',
       readTime: '8 min read',
       excerpt: 'How to achieve product-market fit and scale adoption in underserved education markets.',
-      icon: Rocket,
+      thumbnail: '/images/insight-gtm-strategy.jpg',
       renderContent: () => (
         <div className="space-y-8 text-lg leading-relaxed">
           <p className="text-base">EdTech is one of the most challenging sectors to scale. While the opportunity is massive—billions of students worldwide lack access to quality education—the path to product-market fit is fraught with obstacles: fragmented buyer personas, long sales cycles, regulatory complexity, and deeply entrenched competitors.</p>
@@ -84,7 +83,7 @@ export default function Insights() {
       date: 'June 2025',
       readTime: '12 min read',
       excerpt: 'Why operational resilience is the secret weapon for fintech success.',
-      icon: Activity,
+      thumbnail: '/images/insight-fintech-operations.jpg',
       renderContent: () => (
         <div className="space-y-8 text-lg leading-relaxed">
           <p className="text-base">Fintech is unforgiving. A 5-minute outage can cost millions in lost transactions. A compliance error can trigger regulatory fines. A security breach can destroy trust overnight. The stakes are existential, and the margin for error is razor thin.</p>
@@ -170,7 +169,7 @@ export default function Insights() {
       date: 'August 2023',
       readTime: '9 min read',
       excerpt: 'Navigating the Web3 landscape: what works, what doesn\'t, and where the real opportunity lies.',
-      icon: Link2,
+      thumbnail: '/images/insight-web3-innovation.jpg',
       renderContent: () => (
         <div className="space-y-8 text-lg leading-relaxed">
           <p className="text-base">Web3 is not a monolith. It's a spectrum of technologies, use cases, and business models. Some are revolutionary. Some are speculative. Some are outright scams.</p>
@@ -232,7 +231,7 @@ export default function Insights() {
       date: 'May 2023',
       readTime: '11 min read',
       excerpt: 'How to turn compliance from a cost center into a competitive advantage.',
-      icon: ShieldCheck,
+      thumbnail: '/images/insight-fintech-compliance.jpg',
       renderContent: () => (
         <div className="space-y-8 text-lg leading-relaxed">
           <p className="text-base">Compliance is boring. It's expensive. It slows down product development. And it's absolutely essential.</p>
@@ -402,7 +401,11 @@ export default function Insights() {
                 className="group text-left hover:opacity-80 transition-opacity"
               >
                 <div className="bg-card rounded-lg overflow-hidden border border-border hover:border-primary transition-colors">
-                  <ImagePlaceholder icon={article.icon} className="w-full h-48" />
+                  <img
+                    src={article.thumbnail}
+                    alt={article.title}
+                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
                   <div className="p-6">
                     <Badge className="mb-3">{article.category}</Badge>
                     <h3 className="text-xl font-semibold mb-3 text-foreground group-hover:text-primary transition-colors">

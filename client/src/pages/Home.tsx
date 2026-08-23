@@ -10,8 +10,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Collapsible, CollapsibleTrigger, CollapsibleContent } from "@/components/ui/collapsible";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
-import { Mail, Linkedin, ExternalLink, Award, TrendingUp, Users, Zap, Shield, ChevronDown, ArrowRight, Rocket, Settings2, BarChart3, GraduationCap, Database, Wallet, Activity, Link2 } from "lucide-react";
+import { Mail, Linkedin, ExternalLink, Award, TrendingUp, Users, Zap, Shield, ArrowRight } from "lucide-react";
 import { useState } from "react";
 
 export default function Home() {
@@ -22,8 +21,13 @@ export default function Home() {
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="container py-4 flex items-center justify-between">
-          <div className="text-2xl font-bold" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Anant Gyan
+          <div className="flex items-center gap-5">
+            <div className="text-2xl font-bold" style={{ fontFamily: "'Playfair Display', serif" }}>
+              Anant Gyan
+            </div>
+            <Badge variant="secondary" className="text-sm font-medium py-1.5 px-3">
+              ⚡ Built using Claude Code within <span className="text-accent font-bold">30 minutes</span>
+            </Badge>
           </div>
           <div className="flex items-center gap-6">
             <a href="#about" className="text-sm font-medium hover:text-primary transition-colors">About</a>
@@ -41,11 +45,6 @@ export default function Home() {
         <div className="container relative py-24 lg:py-32">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="max-w-2xl">
-            <div className="mb-6">
-              <Badge variant="secondary" className="text-xs font-medium">
-                ⚡ Built using Claude Code within 30 minutes
-              </Badge>
-            </div>
             <h1 className="text-5xl lg:text-7xl mb-6 text-foreground leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
               Product Operations Manager
             </h1>
@@ -79,11 +78,13 @@ export default function Home() {
             </div>
             </div>
             <div className="lg:block">
-              <img
-                src="/images/og-image-v2.jpg"
-                alt="Anant Gyan - Product Operations Manager"
-                className="w-full max-w-sm lg:max-w-none mx-auto lg:mx-0 rounded-lg shadow-2xl"
-              />
+              <div className="w-full max-w-sm lg:max-w-none mx-auto lg:mx-0 aspect-[4/5] rounded-lg shadow-2xl overflow-hidden">
+                <img
+                  src="/images/hero.jpg"
+                  alt="Anant Gyan - Product Operations Manager"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -162,7 +163,7 @@ export default function Home() {
             {/* GTM Strategy */}
             <Card className="p-8 bg-card border-border hover:border-primary transition-colors">
               <div className="mb-6">
-                <ImagePlaceholder icon={Rocket} className="w-full h-48 rounded-lg mb-4" />
+                <img src="/images/gtm-strategy.jpg" alt="GTM Strategy" className="w-full h-48 object-cover rounded-lg mb-4" />
               </div>
               <h3 className="text-2xl font-semibold mb-4 text-foreground" style={{ fontFamily: "'Lora', serif" }}>
                 GTM Strategy & Operations
@@ -189,7 +190,7 @@ export default function Home() {
             {/* Product Operations */}
             <Card className="p-8 bg-card border-border hover:border-primary transition-colors">
               <div className="mb-6">
-                <ImagePlaceholder icon={Settings2} className="w-full h-48 rounded-lg mb-4" />
+                <img src="/images/product-operations.jpg" alt="Product Operations" className="w-full h-48 object-cover rounded-lg mb-4" />
               </div>
               <h3 className="text-2xl font-semibold mb-4 text-foreground" style={{ fontFamily: "'Lora', serif" }}>
                 Product Operations
@@ -247,7 +248,7 @@ export default function Home() {
             {/* Data-Driven Leadership */}
             <Card className="p-8 bg-card border-border hover:border-primary transition-colors">
               <div className="mb-6">
-                <ImagePlaceholder icon={BarChart3} className="w-full h-48 rounded-lg mb-4" />
+                <img src="/images/data-driven-leadership.jpg" alt="Data-Driven Leadership" className="w-full h-48 object-cover rounded-lg mb-4" />
               </div>
               <h3 className="text-2xl font-semibold mb-4 text-foreground" style={{ fontFamily: "'Lora', serif" }}>
                 Data-Driven Leadership
@@ -568,7 +569,7 @@ export default function Home() {
             <a href="/case-studies?study=elevate" className="group">
               <Card className="overflow-hidden bg-background border-border hover:border-primary transition-all hover:shadow-lg">
                 <div className="h-48 overflow-hidden bg-muted">
-                  <ImagePlaceholder icon={GraduationCap} className="w-full h-full" />
+                  <img src="/images/elevate-wisconsin.jpg" alt="ELEVATE Wisconsin" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2 text-foreground group-hover:text-primary transition-colors" style={{ fontFamily: "'Lora', serif" }}>
@@ -588,7 +589,7 @@ export default function Home() {
             <a href="/case-studies?study=google" className="group">
               <Card className="overflow-hidden bg-background border-border hover:border-primary transition-all hover:shadow-lg">
                 <div className="h-48 overflow-hidden bg-muted">
-                  <ImagePlaceholder icon={Database} className="w-full h-full" />
+                  <img src="/images/ai-query-optimization.jpg" alt="Google Query Optimization" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2 text-foreground group-hover:text-primary transition-colors" style={{ fontFamily: "'Lora', serif" }}>
@@ -608,7 +609,7 @@ export default function Home() {
             <a href="/case-studies?study=crypto" className="group">
               <Card className="overflow-hidden bg-background border-border hover:border-primary transition-all hover:shadow-lg">
                 <div className="h-48 overflow-hidden bg-muted">
-                  <ImagePlaceholder icon={Wallet} className="w-full h-full" />
+                  <img src="/images/cryptosmartlife.jpg" alt="CryptoSmartlife" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2 text-foreground group-hover:text-primary transition-colors" style={{ fontFamily: "'Lora', serif" }}>
@@ -645,7 +646,7 @@ export default function Home() {
             {/* Article 1 */}
             <a href="/insights?article=gtm-strategy" className="group">
               <div className="rounded-lg overflow-hidden mb-4 h-48 bg-card">
-                <ImagePlaceholder icon={Rocket} className="w-full h-full" />
+                <img src="/images/insight-gtm-strategy.jpg" alt="EdTech GTM Strategy" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
               </div>
               <Badge variant="secondary" className="mb-3">GTM Strategy</Badge>
               <h3 className="text-xl font-semibold mb-2 text-foreground group-hover:text-primary transition-colors" style={{ fontFamily: "'Playfair Display', serif" }}>
@@ -660,7 +661,7 @@ export default function Home() {
             {/* Article 2 */}
             <a href="/insights?article=fintech-operations" className="group">
               <div className="rounded-lg overflow-hidden mb-4 h-48 bg-card">
-                <ImagePlaceholder icon={Activity} className="w-full h-full" />
+                <img src="/images/insight-fintech-operations.jpg" alt="Fintech Operations" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
               </div>
               <Badge variant="secondary" className="mb-3">Fintech Operations</Badge>
               <h3 className="text-xl font-semibold mb-2 text-foreground group-hover:text-primary transition-colors" style={{ fontFamily: "'Playfair Display', serif" }}>
@@ -675,7 +676,7 @@ export default function Home() {
             {/* Article 3 */}
             <a href="/insights?article=web3-innovation" className="group">
               <div className="rounded-lg overflow-hidden mb-4 h-48 bg-card">
-                <ImagePlaceholder icon={Link2} className="w-full h-full" />
+                <img src="/images/insight-web3-innovation.jpg" alt="Web3 Innovation" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
               </div>
               <Badge variant="secondary" className="mb-3">Web3 & Blockchain</Badge>
               <h3 className="text-xl font-semibold mb-2 text-foreground group-hover:text-primary transition-colors" style={{ fontFamily: "'Playfair Display', serif" }}>
@@ -690,7 +691,7 @@ export default function Home() {
             {/* Article 4 */}
             <a href="/insights?article=fintech-compliance" className="group">
               <div className="rounded-lg overflow-hidden mb-4 h-48 bg-card">
-                <ImagePlaceholder icon={Shield} className="w-full h-full" />
+                <img src="/images/insight-fintech-compliance.jpg" alt="Fintech Compliance" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
               </div>
               <Badge variant="secondary" className="mb-3">Compliance & Regulation</Badge>
               <h3 className="text-xl font-semibold mb-2 text-foreground group-hover:text-primary transition-colors" style={{ fontFamily: "'Playfair Display', serif" }}>
