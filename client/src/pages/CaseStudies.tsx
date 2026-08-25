@@ -4,6 +4,7 @@ import { ChevronDown, ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import Nav from "@/components/Nav";
 
 export default function CaseStudies() {
   const [expandedCase, setExpandedCase] = useState<string | null>(
@@ -19,17 +20,7 @@ export default function CaseStudies() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-        <div className="container py-4 flex items-center justify-between">
-          <a href="/" className="text-2xl font-bold" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Anant Gyan
-          </a>
-          <a href="/" className="text-sm font-medium hover:text-primary transition-colors flex items-center gap-1">
-            ← Back to Home
-          </a>
-        </div>
-      </nav>
+      <Nav />
 
       {/* Header */}
       <section className="py-16 bg-card border-b border-border">
@@ -96,6 +87,11 @@ export default function CaseStudies() {
                       <div>
                         <h4 className="font-semibold text-foreground mb-3 text-lg">The Solution</h4>
                         <p className="leading-relaxed">ELEVATE Wisconsin provides comprehensive financial education content and structured teacher training programs to integrate financial literacy into K-12 curricula. Rather than building a direct-to-student platform, we recognized that teachers are the true gatekeepers of curriculum adoption. The platform trains teachers to become financial education advocates, creating a multiplier effect across school districts. This approach ensures sustainability and cultural relevance in rural and tribal communities.</p>
+                      </div>
+
+                      <div>
+                        <h4 className="font-semibold text-foreground mb-3 text-lg">Program Architecture</h4>
+                        <img src="/images/elevate-architecture.jpg" alt="ELEVATE Wisconsin Program Architecture" className="w-full rounded-lg shadow-lg mb-6" />
                       </div>
 
                       <div>

@@ -10,6 +10,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Collapsible, CollapsibleTrigger, CollapsibleContent } from "@/components/ui/collapsible";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import Nav from "@/components/Nav";
 import { Mail, Linkedin, ExternalLink, Award, TrendingUp, Users, Zap, Shield, ArrowRight } from "lucide-react";
 import { useState } from "react";
 
@@ -18,56 +19,27 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-        <div className="container py-4 flex items-center justify-between">
-          <div className="flex items-center gap-5">
-            <div className="text-2xl font-bold" style={{ fontFamily: "'Playfair Display', serif" }}>
-              Anant Gyan
-            </div>
-            <Badge variant="secondary" className="text-sm font-medium py-1.5 px-3">
-              ⚡ Built using Claude Code within <span className="text-accent font-bold">30 minutes</span>
-            </Badge>
-          </div>
-          <div className="flex items-center gap-6">
-            <a href="#about" className="text-sm font-medium hover:text-primary transition-colors">About</a>
-            <a href="#expertise" className="text-sm font-medium hover:text-primary transition-colors">Expertise</a>
-            <a href="/case-studies" className="text-sm font-medium hover:text-primary transition-colors">Case Studies</a>
-            <a href="#experience" className="text-sm font-medium hover:text-primary transition-colors">Experience</a>
-            <a href="/insights" className="text-sm font-medium hover:text-primary transition-colors">Insights</a>
-            <a href="#contact" className="text-sm font-medium hover:text-primary transition-colors">Contact</a>
-          </div>
-        </div>
-      </nav>
+      <Nav />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        <div className="container relative py-24 lg:py-32">
+        <div className="container relative pt-32 pb-24 lg:pt-40 lg:pb-32">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="max-w-2xl">
+            <div className="mb-6">
+              <Badge variant="secondary" className="text-sm font-medium py-1.5 px-3">
+                ⚡ Built using Claude Code within <span className="text-accent font-bold">30 minutes</span>
+              </Badge>
+            </div>
             <h1 className="text-5xl lg:text-7xl mb-6 text-foreground leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
               Product Operations Manager
             </h1>
             <p className="text-lg lg:text-xl mb-2 text-muted-foreground max-w-2xl" style={{ fontFamily: "'Lora', serif" }}>
-              8+ Years in Fintech & EdTech | KYC/AML . Custody . Payments . AI Automation
+              8+ Years in Fintech & EdTech | KYC/AML . Custody . AI Integration / Enablement . Workflow Automation
             </p>
             <p className="text-lg lg:text-xl mb-8 text-muted-foreground max-w-2xl" style={{ fontFamily: "'Lora', serif" }}>
-              70k+ Users . $3M+ Assets | Wisconsin MBA
+              70k+ Users - $3M+ Assets Managed | Wisconsin MBA
             </p>
-            <div className="grid grid-cols-3 gap-8 mb-12 max-w-2xl">
-              <div>
-                <div className="text-4xl font-bold text-primary mb-2">$3M+</div>
-                <div className="text-sm text-muted-foreground">Assets Managed</div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold text-primary mb-2">70K+</div>
-                <div className="text-sm text-muted-foreground">Users Enabled</div>
-              </div>
-              <div>
-                <div className="text-4xl font-bold text-primary mb-2">90%</div>
-                <div className="text-sm text-muted-foreground">Faster with AI</div>
-              </div>
-            </div>
             <div className="flex gap-4">
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
                 <a href="#experience">View Work</a>

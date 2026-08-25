@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { ArrowLeft, Clock, Calendar } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
+import Nav from '@/components/Nav';
 
 export default function Insights() {
   const [selectedArticle, setSelectedArticle] = useState<string | null>(
@@ -323,20 +324,20 @@ export default function Insights() {
 
     return (
       <div className="min-h-screen bg-background">
-        <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-          <div className="container py-4 flex items-center justify-between">
-            <button
-              onClick={() => {
-                window.history.replaceState(null, '', '/insights');
-                setSelectedArticle(null);
-              }}
-              className="flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Insights
-            </button>
-          </div>
-        </nav>
+        <Nav />
+
+        <div className="container pt-6">
+          <button
+            onClick={() => {
+              window.history.replaceState(null, '', '/insights');
+              setSelectedArticle(null);
+            }}
+            className="flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            Back to Insights
+          </button>
+        </div>
 
         <article className="container py-20">
           <div className="max-w-3xl mx-auto">
@@ -368,16 +369,7 @@ export default function Insights() {
 
   return (
     <div className="min-h-screen bg-background">
-      <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-        <div className="container py-4 flex items-center justify-between">
-          <div className="text-2xl font-bold" style={{ fontFamily: "'Playfair Display', serif" }}>
-            Anant Gyan
-          </div>
-          <div className="flex items-center gap-6">
-            <a href="/" className="text-sm font-medium hover:text-primary transition-colors">Home</a>
-          </div>
-        </div>
-      </nav>
+      <Nav />
 
       <section className="py-20 bg-background">
         <div className="container">
