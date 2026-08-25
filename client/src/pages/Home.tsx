@@ -23,8 +23,8 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        <div className="container relative pt-8 pb-16 lg:pt-10 lg:pb-20">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="container relative pt-8 pb-10 lg:pt-10 lg:pb-20">
+          <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
             <div className="max-w-2xl">
             <div className="mb-6">
               <Badge variant="secondary" className="text-sm font-medium py-1.5 px-3">
@@ -50,7 +50,7 @@ export default function Home() {
             </div>
             </div>
             <div className="lg:block">
-              <div className="w-full max-w-sm lg:max-w-none mx-auto lg:mx-0 aspect-[4/5] rounded-lg shadow-2xl overflow-hidden">
+              <div className="w-full max-w-sm mx-auto aspect-[4/3] max-h-[32vh] sm:max-w-none sm:aspect-[16/9] sm:max-h-[45vh] lg:max-w-none lg:mx-0 lg:aspect-[4/5] lg:max-h-none rounded-lg shadow-2xl overflow-hidden">
                 <img
                   src="/images/hero.jpg"
                   alt="Anant Gyan - Product Operations Manager"
