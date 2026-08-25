@@ -50,11 +50,11 @@ export default function Home() {
             </div>
             </div>
             <div className="lg:block">
-              <div className="w-full max-w-sm mx-auto aspect-[4/3] max-h-[32vh] sm:max-w-none sm:aspect-[16/9] sm:max-h-[45vh] lg:max-w-none lg:mx-0 lg:aspect-[4/5] lg:max-h-none rounded-lg shadow-2xl overflow-hidden">
+              <div className="w-full max-w-sm mx-auto aspect-[4/3] max-h-[32vh] sm:max-w-none sm:aspect-[3/2] sm:max-h-[50vh] lg:max-w-none lg:mx-0 lg:aspect-[4/5] lg:max-h-none rounded-lg shadow-2xl overflow-hidden">
                 <img
                   src="/images/hero.jpg"
                   alt="Anant Gyan - Product Operations Manager"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
             </div>
