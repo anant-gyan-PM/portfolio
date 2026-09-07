@@ -1,0 +1,112 @@
+import { useState, useRef, useEffect } from "react";
+import { MessageCircle, X, Send } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+type Message = { role: "user" | "assistant"; text: string };
+
+const GREETING: Message = {
+  role: "assistant",
+  text: "Hi! Ask me anything about Anant's experience, skills, or case studies.",
+};
+
+export default function ChatWidget() {
+  const [open, setOpen] = useState(false);
+  const [messages, setMessages] = useState<Message[]>([GREETING]);
+  const [input, setInput] = useState("");
+  const [loading, setLoading] = useState(false);
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" });
+  }, [messages, open]);
+
+  async function sendMessage() {
+    const question = input.trim();
+    if (!question || loading) return;
+
+    setMessages((prev) => [...prev, { role: "user", text: question }]);
+    setInput("");
+    setLoading(true);
+
+    try {
+      const res = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ question }),
+      });
+      const data = await res.json();
+      const answer =
+        data.answer || "Something went wrong — please try again, or reach out via the Contact section.";
+      setMessages((prev) => [...prev, { role: "assistant", text: answer }]);
+    } catch {
+      setMessages((prev) => [
+        ...prev,
+        {
+          role: "assistant",
+          text: "Something went wrong reaching the server — please try again, or reach out via the Contact section.",
+        },
+      ]);
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  return (
+    <div className="fixed bottom-5 right-5 z-50">
+      {open && (
+        <div className="mb-3 w-[calc(100vw-2.5rem)] max-w-sm h-[28rem] bg-background border border-border rounded-lg shadow-2xl flex flex-col overflow-hidden">
+          <div className="px-4 py-3 bg-primary text-primary-foreground flex items-center justify-between">
+            <span className="font-semibold text-sm" style={{ fontFamily: "'Lora', serif" }}>
+              Ask about Anant
+            </span>
+            <button onClick={() => setOpen(false)} aria-label="Close chat" className="hover:opacity-80">
+              <X className="w-4 h-4" />
+            </button>
+          </div>
+
+          <div ref={scrollRef} className="flex-1 overflow-y-auto p-4 space-y-3">
+            {messages.map((m, i) => (
+              <div
+                key={i}
+                className={`text-sm rounded-lg px-3 py-2 max-w-[85%] leading-relaxed ${
+                  m.role === "user"
+                    ? "ml-auto bg-primary text-primary-foreground"
+                    : "bg-card border border-border text-foreground"
+                }`}
+              >
+                {m.text}
+              </div>
+            ))}
+            {loading && (
+              <div className="bg-card border border-border text-muted-foreground text-sm rounded-lg px-3 py-2 max-w-[85%]">
+                Thinking…
+              </div>
+            )}
+          </div>
+
+          <div className="p-3 border-t border-border flex gap-2">
+            <input
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyDown={(e) => e.key === "Enter" && sendMessage()}
+              placeholder="Ask a question…"
+              className="flex-1 text-sm px-3 py-2 rounded-md border border-border bg-background focus:outline-none focus:ring-1 focus:ring-primary"
+              maxLength={500}
+            />
+            <Button size="icon" onClick={sendMessage} disabled={loading || !input.trim()} aria-label="Send">
+              <Send className="w-4 h-4" />
+            </Button>
+          </div>
+        </div>
+      )}
+
+      <button
+        onClick={() => setOpen((v) => !v)}
+        aria-label={open ? "Close chat" : "Open chat"}
+        className="w-14 h-14 rounded-full bg-primary text-primary-foreground shadow-lg flex items-center justify-center hover:bg-primary/90 transition-colors"
+      >
+        {open ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
+      </button>
+    </div>
+  );
+}
