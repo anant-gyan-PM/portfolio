@@ -31,6 +31,12 @@ export default function ChatWidget() {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" });
   }, [messages, open, showSuggestions]);
 
+  useEffect(() => {
+    const openFromOutside = () => setOpen(true);
+    window.addEventListener("nami:open", openFromOutside);
+    return () => window.removeEventListener("nami:open", openFromOutside);
+  }, []);
+
   async function sendMessage(overrideText?: string) {
     const question = (overrideText ?? input).trim();
     if (!question || loading) return;
