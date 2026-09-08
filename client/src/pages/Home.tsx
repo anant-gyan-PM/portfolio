@@ -32,7 +32,7 @@ export default function Home() {
             >
               <span className="relative flex-shrink-0">
                 <img src="/images/nami-avatar.png" alt="Nami" className="w-8 h-8 rounded-full object-cover" />
-                <span className="absolute -top-1.5 -right-1.5 bg-accent text-accent-foreground text-[8px] font-bold uppercase tracking-wide rounded-full px-1.5 py-0.5 shadow-sm animate-pulse">
+                <span className="absolute -top-4 -right-2 bg-accent text-accent-foreground text-[10px] font-bold uppercase tracking-wide rounded-full px-2 py-0.5 shadow-sm animate-pulse">
                   New
                 </span>
               </span>

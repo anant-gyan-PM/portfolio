@@ -9,7 +9,7 @@ Bachelor of Technology in Information Technology — West Bengal University of T
 Certified Scrum Product Owner (CSPO). Certified ScrumMaster (CSM).
 
 ## Contact
-Anant can be reached by email at anant.gyan@outlook.com or on LinkedIn at linkedin.com/in/anantgyan. He is open to new opportunities and collaborations. For anything not covered in his background, direct people to reach out via email or LinkedIn rather than guessing.
+Anant can be reached by email at anant.gyan@outlook.com or on LinkedIn at linkedin.com/in/anantgyan. He's always excited to learn about new projects and ways he can collaborate, so feel free to message him through either channel. For anything not covered in his background, direct people to reach out via email or LinkedIn rather than guessing.
 
 ## Skills — Product Operations
 Process design & SOPs, vendor sourcing & negotiation, incident response systems, onboarding operations, reconciliation & audit process, GTM strategy & operations, product-led growth (PLG), RICE prioritization, Jira & Confluence.

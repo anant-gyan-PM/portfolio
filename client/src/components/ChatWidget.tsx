@@ -24,6 +24,7 @@ export default function ChatWidget() {
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [showSuggestions, setShowSuggestions] = useState(true);
+  const [showHint, setShowHint] = useState(true);
   const scrollRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -160,8 +161,30 @@ export default function ChatWidget() {
         </div>
       )}
 
+      {!open && showHint && (
+        <div className="absolute bottom-1 right-16 flex items-center gap-2">
+          <div className="relative bg-background border border-border rounded-lg shadow-lg pl-3 pr-7 py-2 text-sm font-medium text-foreground whitespace-nowrap">
+            Can I help you? 👋
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                setShowHint(false);
+              }}
+              aria-label="Dismiss"
+              className="absolute top-1 right-1.5 text-muted-foreground hover:text-foreground text-xs leading-none"
+            >
+              ✕
+            </button>
+            <span className="absolute top-1/2 -right-1.5 -translate-y-1/2 w-3 h-3 bg-background border-t border-r border-border rotate-45" />
+          </div>
+        </div>
+      )}
+
       <button
-        onClick={() => setOpen((v) => !v)}
+        onClick={() => {
+          setOpen((v) => !v);
+          setShowHint(false);
+        }}
         aria-label={open ? "Close chat" : "Open chat"}
         className="w-14 h-14 rounded-full bg-primary text-primary-foreground shadow-lg flex items-center justify-center hover:bg-primary/90 transition-colors overflow-hidden"
       >
