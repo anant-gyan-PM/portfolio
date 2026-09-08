@@ -28,19 +28,16 @@ export default function Home() {
             <div className="max-w-2xl">
             <button
               onClick={() => window.dispatchEvent(new Event("nami:open"))}
-              className="mb-3 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
+              className="mb-6 inline-flex items-start gap-2 text-sm font-semibold text-primary hover:underline text-left"
             >
-              <img src="/images/nami-avatar.png" alt="Nami" className="w-7 h-7 rounded-full object-cover flex-shrink-0" />
-              <span className="inline-flex items-center whitespace-nowrap rounded-full bg-accent text-accent-foreground text-[10px] font-bold uppercase tracking-wide px-2 py-0.5">
-                Newly Launched
+              <span className="relative flex-shrink-0">
+                <img src="/images/nami-avatar.png" alt="Nami" className="w-8 h-8 rounded-full object-cover" />
+                <span className="absolute -top-1.5 -right-1.5 bg-accent text-accent-foreground text-[8px] font-bold uppercase tracking-wide rounded-full px-1.5 py-0.5 shadow-sm animate-pulse">
+                  New
+                </span>
               </span>
-              Now Interact with Nami — a Retrieval-Augmented Generation (RAG) Assistant →
+              <span className="pt-1">Now Interact with Nami — a Retrieval-Augmented Generation (RAG) Assistant →</span>
             </button>
-            <div className="mb-6">
-              <Badge variant="secondary" className="text-sm font-medium py-1.5 px-3">
-                ⚡ Built using Claude Code within <span className="text-accent font-bold">30 minutes</span>
-              </Badge>
-            </div>
             <h1 className="text-5xl lg:text-7xl mb-6 text-foreground leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
               Product Operations Manager
             </h1>
@@ -555,10 +552,10 @@ export default function Home() {
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2 text-foreground group-hover:text-primary transition-colors" style={{ fontFamily: "'Lora', serif" }}>
-                    Nami — RAG Portfolio Assistant
+                    Nami — AI Assistant
                   </h3>
                   <p className="text-sm text-muted-foreground mb-4">
-                    A retrieval-augmented generation chatbot built to answer visitor questions grounded in this site's own content
+                    A RAG chatbot that answers visitor questions grounded in real site content
                   </p>
                   <div className="inline-flex items-center gap-2 text-primary font-semibold text-sm">
                     Explore <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />

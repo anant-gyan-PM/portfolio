@@ -13,7 +13,7 @@ const GREETING: Message = {
 
 const SUGGESTED_QUESTIONS = [
   "What's Anant's experience in fintech?",
-  "Tell me about the ELEVATE Wisconsin case study",
+  "Tell me more about the ELEVATE Wisconsin",
   "What are Anant's core skills?",
   "How can I get in touch with Anant?",
 ];
