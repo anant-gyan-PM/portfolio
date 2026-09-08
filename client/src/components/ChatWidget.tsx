@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { MessageCircle, X, Send } from "lucide-react";
+import { X, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 type Message = { role: "user" | "assistant"; text: string };
@@ -80,8 +80,11 @@ export default function ChatWidget() {
       {open && (
         <div className="mb-3 w-[calc(100vw-2.5rem)] max-w-sm h-[28rem] bg-background border border-border rounded-lg shadow-2xl flex flex-col overflow-hidden">
           <div className="px-4 py-3 bg-primary text-primary-foreground flex items-center justify-between">
-            <span className="font-semibold text-sm" style={{ fontFamily: "'Lora', serif" }}>
-              {BOT_NAME} — Anant's Assistant
+            <span className="inline-flex items-center gap-2">
+              <img src="/images/nami-avatar.png" alt={BOT_NAME} className="w-7 h-7 rounded-full object-cover flex-shrink-0" />
+              <span className="font-semibold text-sm" style={{ fontFamily: "'Lora', serif" }}>
+                {BOT_NAME} — Anant's Assistant
+              </span>
             </span>
             <button onClick={() => setOpen(false)} aria-label="Close chat" className="hover:opacity-80">
               <X className="w-4 h-4" />
@@ -129,29 +132,44 @@ export default function ChatWidget() {
             )}
           </div>
 
-          <div className="p-3 border-t border-border flex gap-2">
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              sendMessage();
+            }}
+            className="p-3 border-t border-border flex gap-2"
+          >
             <input
               ref={inputRef}
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              onKeyDown={(e) => e.key === "Enter" && sendMessage()}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.keyCode === 13 || e.which === 13) {
+                  e.preventDefault();
+                  sendMessage();
+                }
+              }}
               placeholder="Ask a question…"
               className="flex-1 text-sm px-3 py-2 rounded-md border border-border bg-background focus:outline-none focus:ring-1 focus:ring-primary"
               maxLength={500}
             />
-            <Button size="icon" onClick={() => sendMessage()} disabled={loading || !input.trim()} aria-label="Send">
+            <Button type="submit" size="icon" disabled={loading || !input.trim()} aria-label="Send">
               <Send className="w-4 h-4" />
             </Button>
-          </div>
+          </form>
         </div>
       )}
 
       <button
         onClick={() => setOpen((v) => !v)}
         aria-label={open ? "Close chat" : "Open chat"}
-        className="w-14 h-14 rounded-full bg-primary text-primary-foreground shadow-lg flex items-center justify-center hover:bg-primary/90 transition-colors"
+        className="w-14 h-14 rounded-full bg-primary text-primary-foreground shadow-lg flex items-center justify-center hover:bg-primary/90 transition-colors overflow-hidden"
       >
-        {open ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
+        {open ? (
+          <X className="w-6 h-6" />
+        ) : (
+          <img src="/images/nami-avatar.png" alt="Chat with Nami" className="w-full h-full object-cover" />
+        )}
       </button>
     </div>
   );

@@ -11,7 +11,6 @@ import { Badge } from "@/components/ui/badge";
 import { Collapsible, CollapsibleTrigger, CollapsibleContent } from "@/components/ui/collapsible";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import Nav from "@/components/Nav";
-import NamiThumbnail from "@/components/NamiThumbnail";
 import { Mail, Linkedin, ExternalLink, Award, TrendingUp, Users, Zap, Shield, ArrowRight } from "lucide-react";
 import { useState } from "react";
 
@@ -29,9 +28,13 @@ export default function Home() {
             <div className="max-w-2xl">
             <button
               onClick={() => window.dispatchEvent(new Event("nami:open"))}
-              className="mb-3 inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline"
+              className="mb-3 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
             >
-              🧠 Interact with Nami — a Retrieval-Augmented Generation (RAG) assistant I designed & built →
+              <img src="/images/nami-avatar.png" alt="Nami" className="w-7 h-7 rounded-full object-cover flex-shrink-0" />
+              <span className="inline-flex items-center whitespace-nowrap rounded-full bg-accent text-accent-foreground text-[10px] font-bold uppercase tracking-wide px-2 py-0.5">
+                Newly Launched
+              </span>
+              Now Interact with Nami — a Retrieval-Augmented Generation (RAG) Assistant →
             </button>
             <div className="mb-6">
               <Badge variant="secondary" className="text-sm font-medium py-1.5 px-3">
@@ -544,6 +547,26 @@ export default function Home() {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {/* Nami RAG Assistant */}
+            <a href="/case-studies?study=nami" className="group">
+              <Card className="overflow-hidden bg-background border-border hover:border-primary transition-all hover:shadow-lg">
+                <div className="h-48 overflow-hidden bg-muted">
+                  <img src="/images/nami-thumbnail.png" alt="Nami — RAG Portfolio Assistant" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-2 text-foreground group-hover:text-primary transition-colors" style={{ fontFamily: "'Lora', serif" }}>
+                    Nami — RAG Portfolio Assistant
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    A retrieval-augmented generation chatbot built to answer visitor questions grounded in this site's own content
+                  </p>
+                  <div className="inline-flex items-center gap-2 text-primary font-semibold text-sm">
+                    Explore <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </Card>
+            </a>
+
             {/* ELEVATE Wisconsin */}
             <a href="/case-studies?study=elevate" className="group">
               <Card className="overflow-hidden bg-background border-border hover:border-primary transition-all hover:shadow-lg">
@@ -596,26 +619,6 @@ export default function Home() {
                   </h3>
                   <p className="text-sm text-muted-foreground mb-4">
                     Fintech platform managing $3M+ in assets with institutional-grade compliance
-                  </p>
-                  <div className="inline-flex items-center gap-2 text-primary font-semibold text-sm">
-                    Explore <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </div>
-              </Card>
-            </a>
-
-            {/* Nami RAG Assistant */}
-            <a href="/case-studies?study=nami" className="group">
-              <Card className="overflow-hidden bg-background border-border hover:border-primary transition-all hover:shadow-lg">
-                <div className="h-48 overflow-hidden bg-muted">
-                  <NamiThumbnail className="w-full h-full group-hover:scale-105 transition-transform duration-300" />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2 text-foreground group-hover:text-primary transition-colors" style={{ fontFamily: "'Lora', serif" }}>
-                    Nami — RAG Portfolio Assistant
-                  </h3>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    A retrieval-augmented generation chatbot built to answer visitor questions grounded in this site's own content
                   </p>
                   <div className="inline-flex items-center gap-2 text-primary font-semibold text-sm">
                     Explore <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />

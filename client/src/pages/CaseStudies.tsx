@@ -5,8 +5,6 @@ import { useEffect, useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import Nav from "@/components/Nav";
-import NamiThumbnail from "@/components/NamiThumbnail";
-import RagArchitectureDiagram from "@/components/RagArchitectureDiagram";
 
 export default function CaseStudies() {
   const [expandedCase, setExpandedCase] = useState<string | null>(
@@ -40,6 +38,109 @@ export default function CaseStudies() {
       <section className="py-16">
         <div className="container max-w-5xl">
           <div className="space-y-8">
+            {/* Nami RAG Assistant */}
+            <Collapsible id="case-nami" open={expandedCase === 'nami'} onOpenChange={(open) => setExpandedCase(open ? 'nami' : null)}>
+              <Card className="overflow-hidden border-border hover:border-primary transition-colors">
+                <div className="grid md:grid-cols-3 gap-6 p-6">
+                  <div className="md:col-span-1">
+                    <img src="/images/nami-thumbnail.png" alt="Nami — RAG Portfolio Assistant" className="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-lg transition-shadow" />
+                  </div>
+
+                  <div className="md:col-span-2 flex flex-col justify-between">
+                    <div>
+                      <Badge variant="secondary" className="mb-3">AI & RAG Engineering</Badge>
+                      <h3 className="text-2xl font-semibold mb-1 text-foreground" style={{ fontFamily: "'Lora', serif" }}>
+                        Nami — RAG Portfolio Assistant
+                      </h3>
+                      <p className="text-sm text-muted-foreground mb-4">A Retrieval-Augmented Generation Chatbot Built for This Site</p>
+                      <p className="text-muted-foreground mb-6 leading-relaxed line-clamp-3">
+                        A production RAG pipeline — vector search, LLM generation, and hard rate-limiting — built to let visitors ask this portfolio questions directly, grounded entirely in Anant's real experience.
+                      </p>
+                    </div>
+
+                    <CollapsibleTrigger asChild>
+                      <Button variant="default" className="bg-primary hover:bg-primary/90 w-fit">
+                        {expandedCase === 'nami' ? (
+                          <>
+                            <span>Collapse</span>
+                            <ChevronDown className="ml-2 w-4 h-4 rotate-180" />
+                          </>
+                        ) : (
+                          <>
+                            <span>Explore</span>
+                            <ArrowRight className="ml-2 w-4 h-4" />
+                          </>
+                        )}
+                      </Button>
+                    </CollapsibleTrigger>
+                  </div>
+                </div>
+
+                <CollapsibleContent>
+                  <div className="border-t border-border p-6 bg-card/50">
+                    <div className="space-y-8 text-muted-foreground max-w-none">
+                      <div>
+                        <h4 className="font-semibold text-foreground mb-3 text-lg">The Challenge</h4>
+                        <p className="leading-relaxed">A static portfolio site can only answer the questions its author anticipated when writing the copy. A recruiter or hiring manager with a specific question — "what did you actually do at CryptoSmartlife?", "how does Anant think about AI in fintech?" — has to dig through pages to find (or not find) the answer. The goal was to let visitors just ask, and get an answer designed to minimize unsupported answers through source-only grounding and graceful abstention, with usage protected against abuse.</p>
+                      </div>
+
+                      <div>
+                        <h4 className="font-semibold text-foreground mb-3 text-lg">The Solution</h4>
+                        <p className="leading-relaxed">Nami is a full Retrieval-Augmented Generation (RAG) pipeline embedded directly in the site. A knowledge base authored from Anant's resume, case studies, interview prep, and career philosophy is chunked and embedded into Pinecone using its integrated inference (no separate embedding provider needed). When a visitor asks a question, the system retrieves the most semantically relevant chunks, feeds them to an LLM as grounding context, and generates an answer using only that content — with a strict system prompt instructing a polite decline whenever the knowledge base doesn't cover the question, rather than guessing. Every component of the stack — vector search, generation, and rate limiting — runs on each provider's free tier.</p>
+                      </div>
+
+                      <div>
+                        <h4 className="font-semibold text-foreground mb-3 text-lg">System Architecture</h4>
+                        <img src="/images/nami-architecture.png" alt="Nami RAG Architecture Diagram" className="w-full rounded-lg shadow-lg mb-6" />
+                      </div>
+
+                      <div>
+                        <h4 className="font-semibold text-foreground mb-3 text-lg">Technical Approach</h4>
+                        <ul className="space-y-3">
+                          <li className="flex gap-3"><span className="text-primary font-bold">1.</span> <span><strong>Knowledge Base & Chunking:</strong> Markdown source files, split into semantically coherent chunks by section, covering experience, case studies, behavioral stories, and career philosophy.</span></li>
+                          <li className="flex gap-3"><span className="text-primary font-bold">2.</span> <span><strong>Retrieval:</strong> Pinecone's hosted embedding model (multilingual-e5-large) embeds both the knowledge base and each incoming question, returning the top semantically matching chunks via integrated inference — no separate embedding API to manage.</span></li>
+                          <li className="flex gap-3"><span className="text-primary font-bold">3.</span> <span><strong>Generation:</strong> Groq serves the LLM (openai/gpt-oss-120b) that reads the retrieved chunks and writes a grounded, concise answer — or declines gracefully when nothing relevant is found.</span></li>
+                          <li className="flex gap-3"><span className="text-primary font-bold">4.</span> <span><strong>Usage Protection:</strong> Upstash Redis enforces a two-layer rate limit — per-visitor and site-wide daily — in front of every retrieval or generation call. The system is protected by application-level rate limits and provider quotas that prevent uncontrolled usage.</span></li>
+                        </ul>
+                      </div>
+
+                      <div>
+                        <h4 className="font-semibold text-foreground mb-3 text-lg">Tools Used</h4>
+                        <div className="flex flex-wrap gap-2">
+                          <Badge variant="secondary">Pinecone (Vector DB + Integrated Embeddings)</Badge>{" "}
+                          <Badge variant="secondary">Groq (LLM Inference)</Badge>{" "}
+                          <Badge variant="secondary">Upstash Redis (Rate Limiting)</Badge>{" "}
+                          <Badge variant="secondary">Vercel Serverless Functions</Badge>{" "}
+                          <Badge variant="secondary">React</Badge>{" "}
+                          <Badge variant="secondary">Claude Code</Badge>
+                        </div>
+                      </div>
+
+                      <div>
+                        <h4 className="font-semibold text-foreground mb-3 text-lg">Design Outcomes</h4>
+                        <ul className="space-y-2">
+                          <li className="flex gap-2"><span className="text-primary">•</span> <span>Recruiters and hiring managers get direct, specific answers in seconds instead of searching across pages</span></li>
+                          <li className="flex gap-2"><span className="text-primary">•</span> <span>Every answer is traceable to real source content — no fabricated claims or numbers</span></li>
+                          <li className="flex gap-2"><span className="text-primary">•</span> <span>No ongoing infrastructure cost at current portfolio traffic, with enforced usage ceilings</span></li>
+                          <li className="flex gap-2"><span className="text-primary">•</span> <span>A working, shippable demonstration of applied AI engineering — not just a claim on a resume</span></li>
+                        </ul>
+                      </div>
+
+                      <div>
+                        <h4 className="font-semibold text-foreground mb-3 text-lg">Validation</h4>
+                        <p className="leading-relaxed">This is a small, informal test set from development and initial verification — not a rigorous benchmark, and no numbers here are estimated or invented. Across 10 sample questions (7 clearly in-scope, 3 clearly out-of-scope), all 7 in-scope questions were answered correctly and grounded in real source content, and all 3 out-of-scope questions were correctly declined with the fallback message. Rate limiting was verified directly against Upstash — the increment/expiry logic works correctly, and the rate-limit check runs before any retrieval or generation call in the code path — though the exact request volume needed to trigger the cap hasn't been load-tested, and response time hasn't been formally measured yet.</p>
+                      </div>
+
+                      <div>
+                        <h4 className="font-semibold text-foreground mb-3 text-lg">Key Learning</h4>
+                        <p className="leading-relaxed">Retrieval quality alone isn't a reliable gate for "does this question belong in scope" — embedding similarity scores stayed high even for clearly off-topic questions, since the model matches general topical similarity rather than literal relevance. The more robust design puts that judgment in the LLM's hands via a strict system prompt, verified empirically rather than assumed, with the vector score kept only as a sanity floor for degenerate cases.</p>
+                      </div>
+                    </div>
+                  </div>
+                </CollapsibleContent>
+              </Card>
+            </Collapsible>
+
             {/* ELEVATE Wisconsin */}
             <Collapsible id="case-elevate" open={expandedCase === 'elevate'} onOpenChange={(open) => setExpandedCase(open ? 'elevate' : null)}>
               <Card className="overflow-hidden border-border hover:border-primary transition-colors">
@@ -367,102 +468,6 @@ export default function CaseStudies() {
             </Collapsible>
 
             {/* Nami RAG Assistant */}
-            <Collapsible id="case-nami" open={expandedCase === 'nami'} onOpenChange={(open) => setExpandedCase(open ? 'nami' : null)}>
-              <Card className="overflow-hidden border-border hover:border-primary transition-colors">
-                <div className="grid md:grid-cols-3 gap-6 p-6">
-                  <div className="md:col-span-1">
-                    <NamiThumbnail className="w-full h-48 rounded-lg shadow-md hover:shadow-lg transition-shadow" />
-                  </div>
-
-                  <div className="md:col-span-2 flex flex-col justify-between">
-                    <div>
-                      <Badge variant="secondary" className="mb-3">AI & RAG Engineering</Badge>
-                      <h3 className="text-2xl font-semibold mb-1 text-foreground" style={{ fontFamily: "'Lora', serif" }}>
-                        Nami — RAG Portfolio Assistant
-                      </h3>
-                      <p className="text-sm text-muted-foreground mb-4">A Retrieval-Augmented Generation Chatbot Built for This Site</p>
-                      <p className="text-muted-foreground mb-6 leading-relaxed line-clamp-3">
-                        A production RAG pipeline — vector search, LLM generation, and hard rate-limiting — built to let visitors ask this portfolio questions directly, grounded entirely in Anant's real experience.
-                      </p>
-                    </div>
-
-                    <CollapsibleTrigger asChild>
-                      <Button variant="default" className="bg-primary hover:bg-primary/90 w-fit">
-                        {expandedCase === 'nami' ? (
-                          <>
-                            <span>Collapse</span>
-                            <ChevronDown className="ml-2 w-4 h-4 rotate-180" />
-                          </>
-                        ) : (
-                          <>
-                            <span>Explore</span>
-                            <ArrowRight className="ml-2 w-4 h-4" />
-                          </>
-                        )}
-                      </Button>
-                    </CollapsibleTrigger>
-                  </div>
-                </div>
-
-                <CollapsibleContent>
-                  <div className="border-t border-border p-6 bg-card/50">
-                    <div className="space-y-8 text-muted-foreground max-w-none">
-                      <div>
-                        <h4 className="font-semibold text-foreground mb-3 text-lg">The Challenge</h4>
-                        <p className="leading-relaxed">A static portfolio site can only answer the questions its author anticipated when writing the copy. A recruiter or hiring manager with a specific question — "what did you actually do at CryptoSmartlife?", "how does Anant think about AI in fintech?" — has to dig through pages to find (or not find) the answer. The goal was to let visitors just ask, and get an answer grounded strictly in real, verifiable content — with zero hallucination risk and zero chance of an unexpected bill, even under abuse.</p>
-                      </div>
-
-                      <div>
-                        <h4 className="font-semibold text-foreground mb-3 text-lg">The Solution</h4>
-                        <p className="leading-relaxed">Nami is a full Retrieval-Augmented Generation (RAG) pipeline embedded directly in the site. A knowledge base authored from Anant's resume, case studies, interview prep, and career philosophy is chunked and embedded into Pinecone using its integrated inference (no separate embedding provider needed). When a visitor asks a question, the system retrieves the most semantically relevant chunks, feeds them to an LLM as grounding context, and generates an answer using only that content — with a strict system prompt instructing a polite decline whenever the knowledge base doesn't cover the question, rather than guessing.</p>
-                      </div>
-
-                      <div>
-                        <h4 className="font-semibold text-foreground mb-3 text-lg">System Architecture</h4>
-                        <RagArchitectureDiagram className="w-full rounded-lg shadow-lg mb-6" />
-                      </div>
-
-                      <div>
-                        <h4 className="font-semibold text-foreground mb-3 text-lg">Technical Approach</h4>
-                        <ul className="space-y-3">
-                          <li className="flex gap-3"><span className="text-primary font-bold">1.</span><span><strong>Knowledge Base & Chunking:</strong> Markdown source files, split into semantically coherent chunks by section, covering experience, case studies, behavioral stories, and career philosophy.</span></li>
-                          <li className="flex gap-3"><span className="text-primary font-bold">2.</span><span><strong>Retrieval:</strong> Pinecone's hosted embedding model (multilingual-e5-large) embeds both the knowledge base and each incoming question, returning the top semantically matching chunks via integrated inference — no separate embedding API to manage.</span></li>
-                          <li className="flex gap-3"><span className="text-primary font-bold">3.</span><span><strong>Generation:</strong> Groq serves the LLM (openai/gpt-oss-120b) that reads the retrieved chunks and writes a grounded, concise answer — or declines gracefully when nothing relevant is found.</span></li>
-                          <li className="flex gap-3"><span className="text-primary font-bold">4.</span><span><strong>Cost Safety:</strong> Upstash Redis enforces a two-layer rate limit — per-visitor and site-wide daily — in front of every retrieval or generation call, on top of every provider's own free tier. The system is architecturally incapable of generating a surprise bill.</span></li>
-                        </ul>
-                      </div>
-
-                      <div>
-                        <h4 className="font-semibold text-foreground mb-3 text-lg">Tools Used</h4>
-                        <div className="flex flex-wrap gap-2">
-                          <Badge variant="secondary">Pinecone (Vector DB + Integrated Embeddings)</Badge>
-                          <Badge variant="secondary">Groq (LLM Inference)</Badge>
-                          <Badge variant="secondary">Upstash Redis (Rate Limiting)</Badge>
-                          <Badge variant="secondary">Vercel Serverless Functions</Badge>
-                          <Badge variant="secondary">React</Badge>
-                          <Badge variant="secondary">Claude Code</Badge>
-                        </div>
-                      </div>
-
-                      <div>
-                        <h4 className="font-semibold text-foreground mb-3 text-lg">Expected Outcomes</h4>
-                        <ul className="space-y-2">
-                          <li className="flex gap-2"><span className="text-primary">•</span><span>Recruiters and hiring managers get direct, specific answers in seconds instead of searching across pages</span></li>
-                          <li className="flex gap-2"><span className="text-primary">•</span><span>Every answer is traceable to real source content — no fabricated claims or numbers</span></li>
-                          <li className="flex gap-2"><span className="text-primary">•</span><span>Zero ongoing infrastructure cost, with a hard, self-imposed usage ceiling well under every provider's real free-tier limit</span></li>
-                          <li className="flex gap-2"><span className="text-primary">•</span><span>A working, shippable demonstration of applied AI engineering — not just a claim on a resume</span></li>
-                        </ul>
-                      </div>
-
-                      <div>
-                        <h4 className="font-semibold text-foreground mb-3 text-lg">Key Learning</h4>
-                        <p className="leading-relaxed">Retrieval quality alone isn't a reliable gate for "does this question belong in scope" — embedding similarity scores stayed high even for clearly off-topic questions, since the model matches general topical similarity rather than literal relevance. The more robust design puts that judgment in the LLM's hands via a strict system prompt, verified empirically rather than assumed, with the vector score kept only as a sanity floor for degenerate cases.</p>
-                      </div>
-                    </div>
-                  </div>
-                </CollapsibleContent>
-              </Card>
-            </Collapsible>
           </div>
         </div>
       </section>
